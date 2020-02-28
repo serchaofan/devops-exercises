@@ -1,316 +1,147 @@
-# DevOps Questions & Exercises
+# DevOps 问题与实践 【[中文翻译版（Laogu 译制） 点这里](./README-zh_CN.md)】
 
-:information_source: &nbsp;This repo contains questions and exercises on various technical topics, sometimes related to DevOps and SRE :)
+DevOps/SRE/云/网络/系统/数据库/大数据 常见面试题集合 个人汉化简化完善版
 
-:bar_chart: &nbsp;There are currently **900** questions
+fork 自[bregman-arie/devops-exercises](https://github.com/bregman-arie/devops-exercises)
 
-:warning: &nbsp;You can use these for preparing for an interview but most of the questions and exercises don't represent an actual interview. Please read [Q&A](common-qa.md) for more details
-
-:thought_balloon: &nbsp;If you wonder "How to prepare for a DevOps interview?", you might want to read some of my suggestions [here](prepare_for_interview.md)
-
-:pencil: &nbsp;You can add more questions and exercises by submitting pull requests :) You can read more about it [here](CONTRIBUTING.md)
-
-****
-
-<!-- ALL-TOPICS-LIST:START -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
 <center>
 <table>
   <tr>
-    <td align="center"><a href="#devops"><img src="images/devops.png" width="70px;" height="75px;" alt="DevOps" /><br /><b>DevOps</b></a><br /><sub><a href="#devops-beginner">Beginner :baby:</a></sub><br><sub><a href="#devops-advanced">Advanced :star:</a></sub></td>
-    <td align="center"><a href="#jenkins"><img src="images/jenkins.png" width="85px;" height="85px;" alt="Jenkins"/><br /><b>Jenkins</b></a><br /><sub><a href="#jenkins-beginner">Beginner :baby:</a></sub><br><sub><a href="#jenkins-advanced">Advanced :star:</a></sub></td>
-    <td align="center"><a href="#git"><img src="images/git.png" width="80px;" height="75px;" alt="Git"/><br /><b>Git</b></a><br /><sub><a href="#git-beginner">Beginner :baby:</a></sub><br><sub><a href="#git-advanced">Advanced :star:</a></sub></td>
-    <td align="center"><a href="#ansible"><img src="images/ansible.png" width="75px;" height="75px;" alt="Ansible"/><br /><b>Ansible</b></a><br /><sub><a href="#ansible-beginner">Beginner :baby:</a></sub><br><sub><a href="#ansible-advanced">Advanced :star:</a></sub></td>
-    <td align="center"><a href="#Network"><img src="images/network.png" width="80x;" height="75px;" alt="Network"/><br /><b>Network</b></a><br /><sub><a href="#network-beginner">Beginner :baby:</a></sub><br><sub><a href="#network-advanced">Advanced :star:</a></sub></td>
-    <td align="center"><a href="#linux"><img src="images/linux.png" width="75x;" height="75px;" alt="Linux"/><br /><b>Linux</b></a><br /><sub><a href="#linux-beginner">Beginner :baby:</a></sub><br><sub><a href="#linux-advanced">Advanced :star:</a></sub></td>
-    <td align="center"><a href="#terraform"><img src="images/terraform.png" width="70px;" height="75px;" alt="Terraform"/><br /><b>Terraform</b></a><br /><sub><a href="#terraform-beginner">Beginner :baby:</a></sub><br><sub><a href="#terraform-advanced">Advanced :star:</a></sub></td>
-    <td align="center"><a href="#docker"><img src="images/docker.png" width="70px;" height="75px;" alt="Docker"/><br /><b>Docker</b></a><br /><sub><a href="#docker-beginner">Beginner :baby:</a></sub><br><sub><a href="#docker-advanced">Advanced :star:</a></sub></td>
+    <td align="center" style="width: 60px;height: 60px">
+      <a href="./catagories/devops.md"><img src="images/devops.svg" height="60px" width="60px" /><br /><b>DevOps</b></a>
+    </td>
+    <td align="center" style="width: 60px;height: 60px">
+      <a href="#jenkins"><img src="images/jenkins.svg" height="60px" width="60px" /><br /><b>Jenkins</b></a>
+    </td>
+    <td align="center" style="width: 60px;height: 60px">
+      <a href="#git"><img src="images/git.svg" height="60px" width="60px" /><br /><b>Git</b></a><br />
+    </td>
+    <td align="center" style="width: 60px;height: 60px">
+      <a href="#ansible"><img src="images/ansible.png" height="60px" width="60px" /><br /><b>Ansible</b></a>
+    </td>
+    <td align="center" style="width: 60px;height: 60px">
+      <a href="#Network"><img src="images/network.svg" height="60px" width="60px" /><br /><b>Network</b></a>
+    </td>
+    <td align="center" style="width: 60px;height: 60px">
+      <a href="#linux"><img src="images/linux.svg" height="60px" width="60px" /><br /><b>Linux</b></a>
+    </td>
+    <td align="center" style="width: 60px;height: 60px">
+      <a href="#terraform"><img src="images/terraform.png" height="60px" width="60px" /><br /><b>Terraform</b></a>
+    </td>
+    <td align="center" style="width: 60px;height: 60px">
+      <a href="#docker"><img src="images/docker.svg" height="60px" width="60px" /><br /><b>Docker</b></a>
+    </td>
   </tr>
   <tr>
-    <td align="center"><a href="#coding"><img src="images/coding.png" width="75px;" height="75px;" alt="coding"/><br /><b>Coding</b></a><br /><sub><a href="#coding-beginner">Beginner :baby:</a></sub><br><sub><a href="#coding-advanced">Advanced :star:</a></sub></td>
-    <td align="center"><a href="#python"><img src="images/python.png" width="80px;" height="75px;" alt="Python"/><br /><b>Python</b></a><br /><sub><a href="#python-beginner">Beginner :baby:</a></sub><br><sub><a href="#python-advanced">Advanced :star:</a></sub></td>
-    <td align="center"><a href="#go"><img src="images/Go.png" width="75px;" height="75px;" alt="go"/><br /><b>Go</b></a><br /><sub><a href="#go-beginner">Beginner :baby:</a></sub><br><sub></td>
-    <td align="center"><a href="#shell-scripting"><img src="images/bash.png" width="70px;" height="75px;" alt="Bash"/><br /><b>Shell Scripting</b></a><br /><sub><a href="#shell-scripting-beginner">Beginner :baby:</a></sub><br><sub><a href="#shell-scripting-advanced">Advanced :star:</a></sub></td>
-    <td align="center"><a href="#kubernetes"><img src="images/kubernetes.png" width="75px;" height="75px;" alt="kubernetes"/><br /><b>Kubernetes</b></a><br /><sub><a href="#kubernetes-beginner">Beginner :baby:</a></sub><br><sub></td>
-    <td align="center"><a href="#prometheus"><img src="images/prometheus.png" width="75px;" height="75px;" alt="Prometheus"/><br /><b>Prometheus</b></a><br /><sub><a href="#prometheus-beginner">Beginner :baby:</a></sub><br><sub><a href="#prometheus-advanced">Advanced :star:</a></sub></td>
-    <td align="center"><a href="#mongo"><img src="images/mongo.png" width="75px;" height="75px;" alt="Mongo"/><br /><b>Mongo</b></a><br /><sub><a href="#mongo-beginner">Beginner :baby:</a></sub><br><sub></td>
-    <td align="center"><a href="#sql"><img src="images/sql.png" width="75px;" height="75px;" alt="sql"/><br /><b>SQL</b></a><br /><sub><a href="#sql-beginner">Beginner :baby:</a></sub><br><sub><a href="#sql-advanced">Advanced :star:</a></sub></td>
+    <td align="center" style="width: 60px;height: 60px">
+      <a href="#coding"><img src="images/coding.svg" height="60px" width="60px" /><br /><b>Coding</b></a>
+    </td>
+    <td align="center" style="width: 60px;height: 60px">
+      <a href="#python"><img src="images/python.svg" height="60px" width="60px" /><br /><b>Python</b></a>
+    </td>
+    <td align="center" style="width: 60px;height: 60px">
+      <a href="#go"><img src="images/go.svg" height="60px" width="60px" /><br /><b>Go</b></a>
+    </td>
+    <td align="center" style="width: 60px;height: 60px">
+      <a href="#shell-scripting"><img src="images/shell.svg" height="60px" width="60px" /><br /><b>Shell
+          Scripting</b></a>
+    </td>
+    <td align="center" style="width: 60px;height: 60px">
+      <a href="#kubernetes"><img src="images/kubernetes.svg" height="60px" width="60px" /><br /><b>Kubernetes</b></a>
+    </td>
+    <td align="center" style="width: 60px;height: 60px">
+      <a href="#prometheus"><img src="images/prometheus.png" height="60px" width="60px" /><br /><b>Prometheus</b></a>
+    </td>
+    <td align="center" style="width: 60px;height: 60px">
+      <a href="#mongo"><img src="images/mongo.png" height="60px" width="60px" /><br /><b>Mongo</b></a>
+    </td>
+    <td align="center" style="width: 60px;height: 60px">
+      <a href="#sql"><img src="images/sql.svg" height="60px" width="60px" /><br /><b>SQL</b></a>
+    </td>
   </tr>
   <tr>
-    <td align="center"><a href="#cloud"><img src="images/cloud.png" width="110px;" height="75px;" alt="Cloud"/><br /><b>Cloud</b></a><br /><sub><a href="#cloud-beginner">Beginner :baby:</a></sub><br><sub></td>
-    <td align="center"><a href="#aws"><img src="images/aws.jpg" width="75px;" height="75px;" alt="aws"/><br /><b>AWS</b></a><br /><sub><a href="#aws-beginner">Beginner :baby:</a></sub><br><sub></td>
-    <td align="center"><a href="#azure"><img src="images/azure.png" width="75px;" height="75px;" alt="azure"/><br /><b>Azure</b></a><br /><sub><a href="#azure-beginner">Beginner :baby:</a></sub><br><sub></td>
-    <td align="center"><a href="#gcp"><img src="images/googlecloud.png" width="80px;" height="75px;" alt="Google Cloud Platform"/><br /><b>Google Cloud Platform</b></a><br /><sub><a href="#gcp-beginner">Beginner :baby:</a></sub><br><sub></td>
-    <td align="center"><a href="#openstack"><img src="images/openstack.png" width="75px;" height="75px;" alt="openstack"/><br /><b>OpenStack</b></a><br /><sub><a href="#openstack-beginner">Beginner :baby:</a></sub><br><sub><a href="#openstack-advanced">Advanced :star:</a></sub></td>
-    <td align="center"><a href="#security"><img src="images/security.png" width="75px;" height="75px;" alt="security"/><br /><b>Security</b></a><br /><sub><a href="#security-beginner">Beginner :baby:</a></sub><br><sub><a href="#security-advanced">Advanced :star:</a></sub></td>
-    <td align="center"><a href="#puppet"><img src="images/puppet.png" width="75px;" height="75px;" alt="puppet"/><br /><b>Puppet</b></a><br /><sub><a href="#puppet-beginner">Beginner :baby:</a></sub><br><sub><a href="#puppet-advanced">Advanced :star:</a></sub></td>
-    <td align="center"><a href="#openshift"><img src="images/openshift.png" width="75px;" height="75px;" alt="OpenShift"/><br /><b>OpenShift</b></a><br /><sub><a href="#openshift-beginner">Beginner :baby:</a></sub><br><sub></td>
+    <td align="center" style="width: 60px;height: 60px">
+      <a href="#cloud"><img src="images/cloud.svg" height="60px" width="60px" /><br /><b>Cloud</b></a>
+    </td>
+    <td align="center" style="width: 60px;height: 60px">
+      <a href="#aws"><img src="images/aws.svg" height="60px" width="60px" /><br /><b>AWS</b></a>
+    </td>
+    <td align="center" style="width: 60px;height: 60px">
+      <a href="#azure"><img src="images/azure.png" height="60px" width="60px" /><br /><b>Azure</b></a>
+    </td>
+    <td align="center" style="width: 60px;height: 60px">
+      <a href="#gcp"><img src="images/googlecloud.svg" height="60px" width="60px" /><br /><b>Google Cloud
+          Platform</b></a>
+    </td>
+    <td align="center" style="width: 60px;height: 60px">
+      <a href="#openstack"><img src="images/openstack.png" height="60px" width="60px" /><br /><b>OpenStack</b></a>
+    </td>
+    <td align="center" style="width: 60px;height: 60px">
+      <a href="#security"><img src="images/security.svg" height="60px" width="60px" /><br /><b>Security</b></a>
+    </td>
+    <td align="center">
+      <a href="#puppet"><img src="images/puppet.png" height="60px" width="60px" /><br /><b>Puppet</b></a>
+    </td>
+    <td align="center" style="width: 60px;height: 60px">
+      <a href="#openshift"><img src="images/openshift.png" height="60px" width="60px" /><br /><b>OpenShift</b></a>
+    </td>
   </tr>
   <tr>
-    <td align="center"><a href="#monitoring"><img src="images/monitoring.png" width="75px;" height="75px;" alt="Monitoring"/><br /><b>Monitoring</b></a><br /><sub><a href="#monitoring-beginner">Beginner :baby:</a></sub><br><sub></td>
-    <td align="center"><a href="#elastic"><img src="images/elastic.png" width="110px;" height="75px;" alt="Elastic"/><br /><b>Elastic</b></a><br /><sub><a href="#elastic-beginner">Beginner :baby:</a></sub><br><sub></td>
-    <td align="center"><a href="#virtualization"><img src="images/virtualization.png" width="75px;" height="75px;" alt="Virtualization"/><br /><b>Virtualization</b></a><br /><sub><a href="#virtualization-beginner">Beginner :baby:</a></sub><br><sub></td>
-    <td align="center"><a href="#dns"><img src="images/dns.png" width="75px;" height="75px;" alt="DNS"/><br /><b>DNS</b></a><br /><sub><a href="#dns-beginner">Beginner :baby:</a></sub><br><sub></td>
-    <td align="center"><a href="#operating-system"><img src="images/os.png" width="75px;" height="75px;" alt="Operating System"/><br /><b>Operating System</b></a><br /><sub><a href="#operating-system-beginner">Beginner :baby:</a></sub><br><sub></td>
-    <td align="center"><a href="#distributed"><img src="images/distributed.png" width="110px;" height="75px;" alt="Distributed"/><br /><b>Distributed</b></a></td>
-    <td align="center"><a href="#general"><img src="images/general.png" width="110px;" height="75px;" alt="General"/><br /><b>General</b></a><br /><sub><a href="#general-beginner">Beginner :baby:</a></sub><br><sub></td>
-    <td align="center"><a href="#HR"><img src="images/HR.png" width="110px;" height="75px;" alt="HR"/><br /><b>HR</b></a></td>
+    <td align="center" style="width: 60px;height: 60px">
+      <a href="#monitoring"><img src="images/monitoring.svg" height="60px" width="60px" /><br /><b>Monitoring</b></a>
+    </td>
+    <td align="center" style="width: 60px;height: 60px">
+      <a href="#elastic"><img src="images/elastic.svg" height="60px" width="60px" /><br /><b>Elastic</b></a>
+    </td>
+    <td align="center" style="width: 60px;height: 60px">
+      <a href="#virtualization"><img src="images/virtualization.svg" height="60px"
+          width="60px" /><br /><b>Virtualization</b></a>
+    </td>
+    <td align="center" style="width: 60px;height: 60px">
+      <a href="#dns"><img src="images/dns.svg" height="60px" width="60px" /><br /><b>DNS</b></a>
+    </td>
+    <td align="center" style="width: 60px;height: 60px">
+      <a href="#operating-system"><img src="images/os.svg" height="60px" width="60px" /><br /><b>Operating
+          System</b></a>
+    </td>
+    <td align="center" style="width: 60px;height: 60px">
+      <a href="#distributed"><img src="images/distributed.png" height="60px" width="60px" /><br /><b>Distributed</b></a>
+    </td>
+    <td align="center" style="width: 60px;height: 60px">
+      <a href="#general"><img src="images/general.png" height="60px" width="60px" /><br /><b>General</b></a>
+    </td>
+    <td align="center" style="width: 60px;height: 60px">
+      <a href="#HR"><img src="images/hr.svg" height="60px" width="60px" /><br /><b>HR</b></a>
+    </td>
   </tr>
   <tr>
-    <td align="center"><a href="#testing"><img src="images/testing.png" width="75px;" height="75px;" alt="Testing"/><br /><b>Testing</b></a></td>
-    <td align="center"><a href="#databases"><img src="images/databases.png" width="75px;" height="75px;" alt="Databases"/><br /><b>Databases</b></a></td>
-    <td align="center"><a href="#regex"><img src="images/regex.png" width="75ph;" height="75px;" alt="RegEx"/><br /><b>Regex</b></a><br /><sub><a href="#regex-beginner">Beginner :baby:</a></sub><br><sub></td>
-    <td align="center"><a href="#design"><img src="images/design.png" width="110px;" height="75px;" alt="Design"/><br /><b>Design</b></a></td>
-    <td align="center"><a href="#questions-you-ask"><img src="images/you.png" width="110px;" height="75px;" alt="you"/><br /><b>Questions you ask</b></a></td>
-    <td align="center"><a href="#exercises"><img src="images/exercises.png" width="110px;" height="75px;" alt="Exercises"/><br /><b>Exercises</b></a></td>
+    <td align="center" style="width: 60px;height: 60px">
+      <a href="#testing"><img src="images/bug.svg" height="60px" width="60px" /><br /><b>Testing</b></a>
+    </td>
+    <td align="center" style="width: 60px;height: 60px">
+      <a href="#databases"><img src="images/database.svg" height="60px" width="60px" /><br /><b>Databases</b></a>
+    </td>
+    <td align="center" style="width: 60px;height: 60px">
+      <a href="#regex"><img src="images/regex.png" height="60px" width="60px" /><br /><b>Regex</b></a>
+    </td>
+    <td align="center" style="width: 60px;height: 60px">
+      <a href="#design"><img src="images/design.svg" height="60px" width="60px" /><br /><b>Design</b></a>
+    </td>
+    <td align="center" style="width: 60px;height: 60px">
+      <a href="#questions-you-ask"><img src="images/you.png" height="60px" width="60px" /><br /><b>Questions you
+          ask</b></a>
+    </td>
+    <td align="center" style="width: 60px;height: 60px">
+      <a href="#exercises"><img src="images/exercises.png" height="60px" width="60px" /><br /><b>Exercises</b></a>
+    </td>
   </tr>
 </table>
 </center>
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
-<!-- ALL-TOPICS-LIST:END -->
-
-## DevOps
-
-<a name="devops-beginner"></a>
-#### :baby: Beginner
-
-<details>
-<summary>What is DevOps?</summary><br><b>
-
-Amazon:
-
-"DevOps is the combination of cultural philosophies, practices, and tools that increases an organization’s ability to deliver applications and services at high velocity: evolving and improving products at a faster pace than organizations using traditional software development and infrastructure management processes. This speed enables organizations to better serve their customers and compete more effectively in the market."
-
-Microsoft:
-
-"DevOps is the union of people, process, and products to enable continuous delivery of value to our end users. The contraction of “Dev” and “Ops” refers to replacing siloed Development and Operations to create multidisciplinary teams that now work together with shared and efficient practices and tools. Essential DevOps practices include agile planning, continuous integration, continuous delivery, and monitoring of applications."
-
-Red Hat:
-
-"DevOps describes approaches to speeding up the processes by which an idea (like a new software feature, a request for enhancement, or a bug fix) goes from development to deployment in a production environment where it can provide value to the user. These approaches require that development teams and operations teams communicate frequently and approach their work with empathy for their teammates. Scalability and flexible provisioning are also necessary. With DevOps, those that need power the most, get it—through self service and automation. Developers, usually coding in a standard development environment, work closely with IT operations to speed software builds, tests, and releases—without sacrificing reliability."
-
-</b></details>
-
-<details>
-<summary>What are the benefits of DevOps? What it can help us to achieve?</summary><br><b>
-
-You should mention some or all of the following:
-
-  * Collaboration
-  * Improved delivery
-  * Security
-  * Speed
-  * Scale
-  * Reliability
-
-Make sure to elaborate :)
-</b></details>
-
-<details>
-<summary>What are the anti-patterns of DevOps?</summary><br><b>
-
-* Not allowing to push in production on Friday :)
-* One specific person is in charge of different tasks. For example there is only one person who is allowed to merge the code of everyone else
-* Treating production differently from development environment. For example, not implementing security in development environment
-</b></details>
-
-<details>
-<summary>What is Continuous Integration?</summary><br><b>
-
-A development practice where developers integrate code into a shared repository frequently. It can range from a couple of changes every day or a week to a couple of changes in one hour in larger scales.
-
-Each piece of code (change/patch) is verified, to make the change is safe to merge. Today, it's a common practice to test the change using an automated build that makes sure the code can integrated. It can be one build which runs several tests in different levels (unit, functional, etc.) or several separate builds that all or some has to pass in order for the change to be merged into the repository.
-</b></details>
-
-<details>
-<summary>What is Continuous Deployment?</summary><br><b>
-</b></details>
-
-<details>
-<summary>What is Continuous Delivery?</summary><br><b>
-</b></details>
-
-<details>
-<summary>What CI/CD best practices are you familiar with? Or what do you consider as CI/CD best practice?</summary><br><b>
-</b></details>
-
-<details>
-<summary>What systems and/or tools are you using for the following?:
-
-  * CI/CD
-  * Provisioning infrastructure
-  * Configuration Management
-  * Monitoring & alerting
-  * Logging
-  * Code review
-  * Code coverage
-  * Tests</summary><br><b>
-  * CI/CD - Jenkins, Circle CI, Travis
-  * Provisioning infrastructure - Terraform, CloudFormation
-  * Configuration Management - Ansible, Puppet, Chef
-  * Monitoring & alerting - Prometheus, Nagios
-  * Logging - Logstash, Graylog, Fluentd
-  * Code review - Gerrit, Review Board
-  * Code coverage - Cobertura, Clover, JaCoCo
-  * Tests - Robot, Serenity, Gauge
-</b></details>
-
-<details>
-<summary>What are you taking into consideration when choosing a tool/technology?</summary><br><b>
-
-In your answer you can mention one or more of the following:
-  * mature vs. cutting edge
-  * community size
-  * architecture aspects - agent vs. agentless, master vs. masterless, etc.
-</b></details>
-
-<details>
-<summary>Explain mutable vs. immutable infrastructure</summary><br><b>
-
-In mutable infrastructure paradigm, changes are applied on top of the existing infrastructure and over time
-the infrastructure builds up a history of changes. Ansible, Puppet and Chef are examples of tools which
-follow mutable infrastructure paradigm.
-
-In immutable infrastructure paradigm, every change is actually a new infrastructure. So a change
-to a server will result in a new server instead of updating it. Terraform is an example of technology
-which follows the immutable infrastructure paradigm.
-</b></details>
-
-<details>
-<summary>What ways are you familiar with to deliver a software? What are the advantages and disadvantages of each method?</summary><br><b>
-
-  * Archive - collect all your app files into one archive (e.g. tar) and deliver it to the user.
-  * Package - depends on the OS, you can use your OS package format (e.g. in RHEL/Fefodra it's RPM) to deliver your software with a way to install, uninstall and update it using the standard packager commands
-  * Images - Either VM or container images where your package is included with everything it needs in order to run successfully.
-</b></details>
-
-<details>
-<summary>What is caching? How it works? Why is it important?</summary><br><b>
-</b></details>
-
-<details>
-<summary>Explain stateless vs. stateful</summary><br><b>
-
-Stateless applications don't store any data in the host which makes it ideal for horizontal scaling and microservices.
-Stateful applications depend on the storage to save state and data, typically databases are stateful applications.
-</b></details>
-
-<details>
-<summary>Describe the workflow of setting up some type of web server (Apache, IIS, Tomcat, ...)</summary><br><b>
-</b></details>
-
-<details>
-<summary>Explain "Open Source"</summary><br><b>
-</b></details>
-
-<details>
-<summary>Describe me the architecture of service/app/project/... you designed and/or implemented</summary><br><b>
-</b></details>
-
-<details>
-<summary>What types of tests are you familiar with?</summary><br><b>
-
-Styling, unit, functional, API, integration, smoke, scenario, ...
-
-You should be able to explain those that you mention.
-</b></details>
-
-<details>
-<summary>You need to install periodically the same package on different operating systems (Ubuntu, RHEL, ...). How would you do it?</summary><br><b>
-
-It can be as simple as one Ansible (or other CM tool) task that runs periodically with Cron. In more advanced cases, perhaps a CI system.
-</b></details>
-
-##### SRE
-
-<details>
-<summary>Compare SRE to DevOps</summary><br><b>
-</b></details>
-
-<details>
-<summary>What is Reliability? How does it fit DevOps?</summary><br><b>
-
-Reliability, when used in DevOps context, is the ability of a system to recover from infrastructure failure or disruption. Part of it is also being able to scale based on your organization or team demands.
-</b></details>
-
-<details>
-<summary>What SRE team is responsible for?</summary><br><b>
-
-One can argue whether it's per company definition or a global one but at least according to a large companies, like Google for example, the SRE team is responsible for availability, latency, performance, efficiency, change management, monitoring, emergency response, and capacity planning of their services
-</b></details>
-
-<details>
-<summary>What is an error budget?</summary><br><b>
-</b></details>
-
-<details>
-<summary>What are MTTF (mean time to failure) and MTTR (mean time to repair)? What these metrics help us to evaluate?</summary><br><b>
-</b></details>
-
-<details>
-<summary>What is a post-mortem meeting? Why is it important?</summary><br><b>
-</b></details>
-
-<details>
-<summary>What is "infrastructure as code"? What implementation of IAC are you familiar with?</summary><br><b>
-</b></details>
-
-<details>
-<summary>How do you manage build artifacts?</summary><br><b>
-</b></details>
-
-<details>
-<summary>What Continuous Integration solution are you using/prefer and why?</summary><br><b>
-</b></details>
-
-<details>
-<summary>What deployment strategies are you familiar with or have used?</summary><br><b>
-</b></details>
-
-<a name="devops-advanced"></a>
-#### :star: Advanced
-
-<details>
-<summary>Tell me how you perform plan capacity for your CI/CD resources (e.g. servers, storage, etc.)</summary><br><b>
-</b></details>
-
-<details>
-<summary>How would you structure/implement CD for an application which depends on several other applications?</summary><br><b>
-</b></details>
-
-<details>
-<summary>How do you measure your CI/CD quality? Are there any metrics or KPIs you are using for measuring the quality?</summary><br><b>
-</b></details>
-
-<details>
-<summary>What is a configuration drift? What problems is it causing?</summary><br><b>
-
-Configuration drift happens when in an environment of servers with the exact same configuration and software, a certain server
-or servers are being applied with updates or configuration which other servers don't get and over time these servers become
-slightly different than all others.
-
-This situation might lead to bugs which hard to identify and reproduce.
-</b></details>
-
-<details>
-<summary>How to deal with a configuration drift?</summary><br><b>
-</b></details>
-
-<details>
-<summary>Do you have experience with testing cross-projects changes? (aka cross-dependency)</summary><br><b>
-
-Note: cross-dependency is when you have two or more changes to separate projects and you would like to test them in mutual build instead of testing each change separately.
-</b></details>
-
-<details>
-<summary>Have you contributed to an open source project? Tell me about this experience</summary><br><b>
-</b></details>
 
 ## Jenkins
 
 <a name="jenkins-beginner"></a>
+
 #### :baby: Beginner
 
 <details>
@@ -325,11 +156,11 @@ Jenkins integrates development life-cycle processes of all kinds, including buil
 <details>
 <summary>What are the advantages of Jenkins over its competitors? Can you compare it to one of the following systems?
 
-  * Travis
-  * Bamboo
-  * Teamcity
-  * CircleCI</summary><br><b>
-</b></details>
+- Travis
+- Bamboo
+- Teamcity
+- CircleCI</summary><br><b>
+  </b></details>
 
 <details>
 <summary>What are the limitations or disadvantages of Jenkins?</summary><br><b>
@@ -338,12 +169,12 @@ Jenkins integrates development life-cycle processes of all kinds, including buil
 <details>
 <summary>Explain the following:
 
-  * Job
-  * Build
-  * Plugin
-  * Slave
-  * Executor</summary><br><b>
-</b></details>
+- Job
+- Build
+- Plugin
+- Slave
+- Executor</summary><br><b>
+  </b></details>
 
 <details>
 <summary>What plugins have you used in Jenkins?</summary><br><b>
@@ -380,6 +211,7 @@ You can describe the UI way to add new slaves but better to explain how to do in
 </b></details>
 
 <a name="jenkins-advanced"></a>
+
 #### :star: Advanced
 
 <details>
@@ -397,9 +229,9 @@ You can describe the UI way to add new slaves but better to explain how to do in
 <details>
 <summary>What are some of Jenkins limitations?</summary><br><b>
 
-  * Testing cross-dependencies (changes from multiple projects together)
-  * Starting builds from any stage (although cloudbees implemented something called checkpoints)
-</b></details>
+- Testing cross-dependencies (changes from multiple projects together)
+- Starting builds from any stage (although cloudbees implemented something called checkpoints)
+  </b></details>
 
 <details>
 <summary>How would you implement an option of a starting a build from a certain stage and not from the beginning?</summary><br><b>
@@ -423,9 +255,10 @@ You can describe the UI way to add new slaves but better to explain how to do in
 </summary><br><b>
 </b></details>
 
-## Cloud 
+## Cloud
 
 <a name="cloud-beginner"></a>
+
 #### :baby: Beginner
 
 <details>
@@ -435,9 +268,9 @@ You can describe the UI way to add new slaves but better to explain how to do in
 <details>
 <summary>What are the advantages of cloud computing? Mention at least 3 advantages</summary><br><b>
 
-* Pay as you go (or consumption-based payment) - you are paying only for what you are using. No upfront payments and payment stops when resources are no longer used.
-* Scalable - resources are scaled down or up based on demand
-</b></details>
+- Pay as you go (or consumption-based payment) - you are paying only for what you are using. No upfront payments and payment stops when resources are no longer used.
+- Scalable - resources are scaled down or up based on demand
+  </b></details>
 
 <details>
 <summary>What types of Cloud Computing are there?</summary><br><b>
@@ -450,10 +283,10 @@ SAAS
 <details>
 <summary>Explain each of the following Cloud Computing Deployments:
 
-  * Public
-  * Hybrid
-  * Private</summary><br><b>
-</b></details>
+- Public
+- Hybrid
+- Private</summary><br><b>
+  </b></details>
 
 <details>
 <summary>What are the differences between Cloud Providers and On-Premise solution?</summary><br><b>
@@ -470,13 +303,14 @@ The main idea behind serverless computing is that you don't need to manage the c
 
 It's important to note that:
 
-* Serverless Computing is still using servers. So saying there are no servers in serverless computing is completely wrong
-* Serverless Computing allows you to have different paying model. You basically pay only when your functions are running and not when the VM or containers are running as in other payment models
-</b></details>
+- Serverless Computing is still using servers. So saying there are no servers in serverless computing is completely wrong
+- Serverless Computing allows you to have different paying model. You basically pay only when your functions are running and not when the VM or containers are running as in other payment models
+  </b></details>
 
 ## AWS
 
 <a name="aws-beginner"></a>
+
 #### :baby: Beginner
 
 #### Global Infrastructure
@@ -484,10 +318,10 @@ It's important to note that:
 <details>
 <summary>Explain the following
 
-  * Availability zone
-  * Region
-  * Edge location</summary><br><b>
-AWS regions are data centers hosted across different geographical locations worldwide, each region is completely independent of one another.<br>
+- Availability zone
+- Region
+- Edge location</summary><br><b>
+  AWS regions are data centers hosted across different geographical locations worldwide, each region is completely independent of one another.<br>
 
 Within each region, there are multiple isolated locations known as Availability Zones. Multiple availability zones ensure high availability in case one of them goes down.<br>
 
@@ -519,7 +353,7 @@ Policies documents used to give permissions as to what a user, group or role are
 </b></details>
 
 #### S3
- 
+
 <details>
 <summary>Explain what is S3 and what is it used for</summary><br>
 <b>
@@ -620,11 +454,11 @@ Stop the instance, the type of the instance to match the desired RAM and start t
 <details>
 <summary>Explain the following
 
-  * Origin
-  * Edge location
-  * Distribution
-</summary><br><b>
-</b></details>
+- Origin
+- Edge location
+- Distribution
+  </summary><br><b>
+  </b></details>
 
 <details>
 <summary>What delivery methods available for the user with CDN?</summary><br><b>
@@ -647,12 +481,12 @@ A transport solution which was designed for transferring large amounts of data (
 <details>
 <summary>What types of load balancers are supported in EC2 and what are they used for?</summary><br><b>
 
-  * Application LB - layer 7 traffic
-  * Network LB - ultra-high performances or static IP address
-  * Classic LB - low costs, good for test or dev environments
-</b></details>
+- Application LB - layer 7 traffic
+- Network LB - ultra-high performances or static IP address
+- Classic LB - low costs, good for test or dev environments
+  </b></details>
 
-##### AWS Security 
+##### AWS Security
 
 <details>
 <summary>What is the shared responsibility model? In other words, what AWS is responsible for and what the user is responsible for in regards to Security?</summary><br><b>
@@ -665,10 +499,10 @@ A transport solution which was designed for transferring large amounts of data (
 <details>
 <summary>Explain what each of the following services is used for
 
-  * AWS Inspector
-  * AWS Artifact
-  * AWS Shield</summary><br><b>
-</b></details>
+- AWS Inspector
+- AWS Artifact
+- AWS Shield</summary><br><b>
+  </b></details>
 
 <details>
 <summary>What is AWS WAF? Give an example of how it can used and describe what resources or services you can use it with</summary><br><b>
@@ -698,7 +532,7 @@ True
 
 1. Multi AZ - great for Disaster Recovery
 2. Read Replicas - for better performances
-</b></details>
+   </b></details>
 
 <details>
 <summary>What is AWS Redshift and how its different than RDS?</summary><br><b>
@@ -707,11 +541,11 @@ True
 <details>
 <summary>What do you if you suspect AWS Redshift performs slowly?</summary><br><b>
 
-* You can confirm your suspicion by going to AWS Redshift console and see running queries graph. This should tell you if there are any long-running queries.
-* If confirmed, you can query for running queries and cancel the irrelevant queries
-* Check for connection leaks (query for running connections and include their IP)
-* Check for table locks and kill irrelevant locking sessions
-</b></details>
+- You can confirm your suspicion by going to AWS Redshift console and see running queries graph. This should tell you if there are any long-running queries.
+- If confirmed, you can query for running queries and cancel the irrelevant queries
+- Check for connection leaks (query for running connections and include their IP)
+- Check for table locks and kill irrelevant locking sessions
+  </b></details>
 
 <details>
 <summary>What is EBS?</summary><br><b>
@@ -720,7 +554,7 @@ True
 <details>
 <summary>What is Amazon ElastiCache? For what cases it used?</summary><br><b>
 
-Amazon Elasticache is a fully managed Redis or Memcached in-memory data store.                                                                       
+Amazon Elasticache is a fully managed Redis or Memcached in-memory data store.  
 It's great for use cases like two-tier web applications where the most frequently accesses data is stored in ElastiCache so response time is optimal.
 </b></details>
 
@@ -816,10 +650,10 @@ AWS CloudTrail
 <details>
 <summary>Explain what are the following services and give an use case example for each one them:
 
-  * CloudTrail
-  * CloudWatch
-  * CloudSearch</summary><br><b>
-</b></details>
+- CloudTrail
+- CloudWatch
+- CloudSearch</summary><br><b>
+  </b></details>
 
 <details>
 <summary>Explain what is AWS Lambda</summary><br><b>
@@ -828,6 +662,7 @@ AWS CloudTrail
 ## Network
 
 <a name="network-beginner"></a>
+
 #### :baby: Beginner
 
 <details>
@@ -843,8 +678,6 @@ A MAC address is a unique identification number or code used to identify individ
 
 Packets that are sent on the ethernet are always coming from a MAC address and sent to a MAC address. If a network adapter is receiving a packet, it is comparing the packet’s destination MAC address to the adapter’s own MAC address.
 
-
-
 </b></details>
 
 <details>
@@ -855,7 +688,6 @@ Packets that are sent on the ethernet are always coming from a MAC address and s
 <summary>What is an IP address?</summary><br><b>
 
 An Internet Protocol address (IP address) is a numerical label assigned to each device connected to a computer network that uses the Internet Protocol for communication.An IP address serves two main functions: host or network interface identification and location addressing.
-
 
 </b></details>
 
@@ -884,9 +716,7 @@ A Subnet mask is a 32-bit number that masks an IP address, and divides the IP ad
 
 ```
 
-### 
-
-
+###
 
 </b></details>
 
@@ -910,14 +740,14 @@ A Subnet mask is a 32-bit number that masks an IP address, and divides the IP ad
 <details>
 <summary>For each of the following determine to which OSI layer it belongs:
 
-  * Error correction
-  * Packets routing
-  * Cables and electrical signals
-  * MAC address
-  * IP address
-  * Sessions between applications
-  * 3 way handshake</summary><br><b>
-</b></details>
+- Error correction
+- Packets routing
+- Cables and electrical signals
+- MAC address
+- IP address
+- Sessions between applications
+- 3 way handshake</summary><br><b>
+  </b></details>
 
 <details>
 <summary>What delivery schemes are you familiar with?</summary><br><b>
@@ -925,7 +755,7 @@ A Subnet mask is a 32-bit number that masks an IP address, and divides the IP ad
 Unitcast: One to one communication where there is one sender and one receiver.
 
 Broadcast: Sending a message to everyone in the network. The address ff:ff:ff:ff:ff:ff is used for broadcasting.
-           Two common protocols which use broadcast are ARP and DHCP.
+Two common protocols which use broadcast are ARP and DHCP.
 
 Multicast: Sending a message to a group of subscribers. It can be one-to-many or many-to-many.
 </b></details>
@@ -944,29 +774,27 @@ CSMA/CD algorithm:
 4. Both hosts stop sending the frame and they send to everyone a 'jam signal' notifying everyone that a collision occurred
 5. They are waiting for a random time before sending again
 6. Once each host waited for a random time, they try to send the frame again and so the
-</b></details>
+   </b></details>
 
 <details>
 <summary>Describe the following network devices and the difference between them:
 
-  * router
-  * switch
-  * hub</summary><br><b>
-</b></details>
+- router
+- switch
+- hub</summary><br><b>
+  </b></details>
 
 <details>
 <summary>How does a router works?</summary><br><b>
 
 A router is a physical or virtual appliance that passes information between two or more packet-switched computer networks. A router inspects a given data packet's destination Internet Protocol address (IP address), calculates the best way for it to reach its destination and then forwards it accordingly.
 
-
 </b></details>
 
 <details>
 <summary>What is NAT?</summary><br><b>
 
- Network Address Translation (NAT) is a process in which one or more local IP address is translated into one or more Global IP address and vice versa in order to provide Internet access to the local hosts. 
-
+Network Address Translation (NAT) is a process in which one or more local IP address is translated into one or more Global IP address and vice versa in order to provide Internet access to the local hosts.
 
 </b></details>
 
@@ -978,7 +806,6 @@ A proxy server acts as a gateway between you and the internet. It’s an interme
 If you’re using a proxy server, internet traffic flows through the proxy server on its way to the address you requested. The request then comes back through that same proxy server (there are exceptions to this rule), and then the proxy server forwards the data received from the website to you.
 
 roxy servers provide varying levels of functionality, security, and privacy depending on your use case, needs, or company policy.
-
 
 </b></details>
 
@@ -992,7 +819,6 @@ A three-way handshake is primarily used to create a TCP socket connection. It wo
 - A client node sends a SYN data packet over an IP network to a server on the same or an external network. The objective of this packet is to ask/infer if the server is open for new connections.
 - The target server must have open ports that can accept and initiate new connections. When the server receives the SYN packet from the client node, it responds and returns a confirmation receipt – the ACK packet or SYN/ACK packet.
 - The client node receives the SYN/ACK from the server and responds with an ACK packet.
-
 
 </b></details>
 
@@ -1015,7 +841,6 @@ TCP establishes a connection between the client and the server to guarantee the 
 
 A default gateway serves as an access point or IP router that a networked computer uses to send information to a computer in another network or the internet.
 
-
 </b></details>
 
 <details>
@@ -1024,7 +849,6 @@ A default gateway serves as an access point or IP router that a networked comput
 ARP stands for Address Resolution Protocol. When you try to ping an IP address on your local network, say 192.168.1.1, your system has to turn the IP address 192.168.1.1 into a MAC address. This involves using ARP to resolve the address, hence its name.
 
 Systems keep an ARP look-up table where they store information about what IP addresses are associated with what MAC addresses. When trying to send a packet to an IP address, the system will first consult this table to see if it already knows the MAC address. If there is a value cached, ARP is not used.
-
 
 </b></details>
 
@@ -1081,6 +905,7 @@ Systems keep an ARP look-up table where they store information about what IP add
 </b></details>
 
 <a name="network-advanced"></a>
+
 #### :star: Advanced
 
 <details>
@@ -1136,6 +961,7 @@ Systems keep an ARP look-up table where they store information about what IP add
 ## Linux
 
 <a name="linux-beginner"></a>
+
 #### :baby: Beginner
 
 <details>
@@ -1143,38 +969,38 @@ Systems keep an ARP look-up table where they store information about what IP add
 
 An open question. Answer based on your real experience. You can highlight one or more of the following:
 
-* Troubleshooting & Debugging
-* Storage
-* Networking
-* Development
-* Deployments
-</b></details>
+- Troubleshooting & Debugging
+- Storage
+- Networking
+- Development
+- Deployments
+  </b></details>
 
 <details>
 <summary>Explain what each of the following commands does and give an example on how to use it:
 
-  * ls
-  * rm 
-  * rmdir (can you achieve the same result by using <code>rm</code>?)
-  * grep
-  * wc
-  * curl
-  * touch
-  * man
-  * nslookup or dig
-  * df</summary><br><b>
+- ls
+- rm
+- rmdir (can you achieve the same result by using <code>rm</code>?)
+- grep
+- wc
+- curl
+- touch
+- man
+- nslookup or dig
+- df</summary><br><b>
 
-  * ls - list files and directories. You can highlight common flags like -d, -a, -l, ...
-  * rm - remove files and directories. You should mention -r for recursive removal
-  * rmdir - remove directories but you should mention it's possible to use rm for that
-  * grep - print lines that match patterns. Could be nice to mention -v, -r, -E flags
-  * wc - print newline, word, and byte counts
-  * curl - tranfer a URL or mention common usage like downloading files, API calls, ...
-  * touch - update timestamps but common usage is to create files
-  * man - reference manuals
-  * nslookup or dig - query nameservers
-  * df - provides info regarding file system disk space usage
-</b></details>
+- ls - list files and directories. You can highlight common flags like -d, -a, -l, ...
+- rm - remove files and directories. You should mention -r for recursive removal
+- rmdir - remove directories but you should mention it's possible to use rm for that
+- grep - print lines that match patterns. Could be nice to mention -v, -r, -E flags
+- wc - print newline, word, and byte counts
+- curl - tranfer a URL or mention common usage like downloading files, API calls, ...
+- touch - update timestamps but common usage is to create files
+- man - reference manuals
+- nslookup or dig - query nameservers
+- df - provides info regarding file system disk space usage
+  </b></details>
 
 <details>
 <summary>Running the command <code>df</code> you get "command not found". What could be wrong and how to fix it?</summary><br><b>
@@ -1186,13 +1012,14 @@ You would solve this by fixing your $PATH variable:
 
 As to fix it there are serveral options:
 
-1. Manually adding what you need to your $PATH <code>PATH="$PATH":/user/bin:/..etc</code> 
+1. Manually adding what you need to your $PATH <code>PATH="$PATH":/user/bin:/..etc</code>
 2. You have your weird env variables backed up.
-3. You would look for your distro default $PATH variable, copy paste using method #1
+3. You would look for your distro default \$PATH variable, copy paste using method #1
 
 Note: There are many ways of getting errors like this: if bash_profile or any configuration file of your interpreter was wrongly modified; causing erratics behaviours,
 permissions issues, bad compiled software (if you compiled it by yourself)... there is no answer that will be true 100% of the time.
 </b>
+
 </p>
 </details>
 
@@ -1202,7 +1029,7 @@ permissions issues, bad compiled software (if you compiled it by yourself)... th
 You can use the commands <code>cron</code> and <code>at</code>.
 With cron, tasks are scheduled using the following format:
 
-<code>*/30 * * * * bash myscript.sh</code> Executes the script every 30 minutes.
+<code>_/30 _ \* \* \* bash myscript.sh</code> Executes the script every 30 minutes.
 
 <minute> <hour> <day of month> <month> <day of week> <command to execute>
 
@@ -1230,15 +1057,16 @@ Using the `chmod` command.
 <details>
 <summary>What does the following permissions mean?:
 
-  * 777
-  * 644
-  * 750</summary><br><b>
+- 777
+- 644
+- 750</summary><br><b>
 
 <pre>
 777 - You give the owner, group and other: Execute (1), Write (2) and Read (4); 4+2+1 = 7.
 644 - Owner has Read (4), Write (2), 4+2 = 6; Group and Other have Read (4).
 750 - Owner has x+r+w, Group has Read (4) and Execute (1); 4+1 = 5. Other have no permissions.
 </pre>
+
 </b></details>
 
 <details>
@@ -1248,10 +1076,10 @@ Using the `chmod` command.
 <details>
 <summary>You try to delete a file but it fails. Name at least three different reason as to why it could happen</summary><br><b>
 
-* No more disk space
-* No more indoes
-* No permissions
-</b></details>
+- No more disk space
+- No more indoes
+- No permissions
+  </b></details>
 
 <details>
 <summary>What is systemd?</summary><br>
@@ -1263,11 +1091,11 @@ talk to the daemon.
 
 systemd has many features such as user processes control/tracking, snapshot support, inhibitor locks..
 
-
 If we visualize the unix/linux system in layers, systemd would fall directly after the linux kernel.
 
 Hardware -> Kernel -> <u>Daemons</u>, System Libraries, Server Display.
 </b>
+
 </details>
 
 <details>
@@ -1321,11 +1149,11 @@ Hardware -> Kernel -> <u>Daemons</u>, System Libraries, Server Display.
 <details>
 <summary>You get a call from someone claiming "my system is SLOW". What do yo do?</summary><br><b>
 
-* Check with `top` for anything unusual
-* Run `dstat -t` to check if it's related to disk or network.
-* Check if it's network related with `sar`
-* Check I/O stats with `iostat`
-</b></details>
+- Check with `top` for anything unusual
+- Run `dstat -t` to check if it's related to disk or network.
+- Check if it's network related with `sar`
+- Check I/O stats with `iostat`
+  </b></details>
 
 <details>
 <summary>Explain iostat output</summary><br><b>
@@ -1392,15 +1220,15 @@ Hardware -> Kernel -> <u>Daemons</u>, System Libraries, Server Display.
 <details>
 <summary>What do we grep for in each of the following commands?:
 
-  * <code>grep '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}' some_file</code>
-  * <code>grep -E "error|failure" some_file</code>
-  * <code>grep '[0-9]$' some_file</code>
-</summary><br><b>
+- <code>grep '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}' some_file</code>
+- <code>grep -E "error|failure" some_file</code>
+- <code>grep '[0-9]\$' some_file</code>
+  </summary><br><b>
 
 1. An IP address
 2. The word "error" or "failure"
 3. Lines which end with a number
-</b></details>
+   </b></details>
 
 <details>
 <summary>Tell me everything you know about the Linux boot process</summary><br><b>
@@ -1427,16 +1255,16 @@ I consider this as a good blog post to read more about it: https://shapeshed.com
 
 For each file (and directory) in Linux there is an inode, a data structure which stores meta data
 related to the file like its size, owner, permissions, etc.
-</b></details> 
+</b></details>
 
 <details>
 <summary>Which of the following is not included in inode:
 
-  * Link count
-  * File size
-  * File name
-  * File timestamp</summary><br><b>
-</b></details>
+- Link count
+- File size
+- File name
+- File timestamp</summary><br><b>
+  </b></details>
 
 <details>
 <summary>How to check which disks are currently mounted?</summary><br><b>
@@ -1495,10 +1323,10 @@ True
 <details>
 <summary>Explain the following in regards to LVM:
 
-  * PV
-  * VG
-  * LV</summary><br><b>
-</b></details>
+- PV
+- VG
+- LV</summary><br><b>
+  </b></details>
 
 <details>
 <summary>What is NFS? What is it used for?</summary><br><b>
@@ -1523,23 +1351,23 @@ True
 <details>
 <summary>Fix the following commands:
 
-  * sed "s/1/2/g' /tmp/myFile
-  * find . -iname \*.yaml -exec sed -i "s/1/2/g" {} ;
-  
-  </summary><br><b>
-</b>
-<code>sed 's/1/2/g' /tmp/myFile</code><br>
-<code> find . -iname "*.yaml" -exec sed -i "s/1/2/g" {} \; </code>
-</details>
+- sed "s/1/2/g' /tmp/myFile
+- find . -iname \*.yaml -exec sed -i "s/1/2/g" {} ;
+
+    </summary><br><b>
+  </b>
+  <code>sed 's/1/2/g' /tmp/myFile</code><br>
+  <code> find . -iname "*.yaml" -exec sed -i "s/1/2/g" {} \; </code>
+  </details>
 
 <details>
 <summary>Explain what is stored in each of the following paths and if there is anything unique about it:</summary><br><b>
 
-  * /tmp
-  * /var/log
-  * /bin
-  * /usr/local
-</b></details>
+- /tmp
+- /var/log
+- /bin
+- /usr/local
+  </b></details>
 
 #### Processes
 
@@ -1627,10 +1455,10 @@ You can also try closing/terminating the parent process. This will make the zomb
 <details>
 <summary>How to find all the
 
-  * Processes executed/owned by a certain user
-  * Process which are Java processes
-  * Zombie Processes
-</summary><br><b>
+- Processes executed/owned by a certain user
+- Process which are Java processes
+- Zombie Processes
+  </summary><br><b>
 
 If you mention at any point ps command with arugments, be familiar with what these arguments does exactly.
 </b></details>
@@ -1685,9 +1513,10 @@ Kerberos
 File descriptor, also known as file handler, is a unique number which identifies an open file in the operating system.
 
 In Linux (and Unix) the first three file descriptors are:
-  * 0 - the default data stream for input
-  * 1 - the default data stream for output
-  * 2 - the default data stream for output related to errors
+
+- 0 - the default data stream for input
+- 1 - the default data stream for output
+- 2 - the default data stream for output related to errors
 
 This is a great article on the topic: https://www.computerhope.com/jargon/f/file-descriptor.htm
 </b></details>
@@ -1741,6 +1570,7 @@ One of the following would work:
 netstat -tnlp | grep <port_number>
 lsof -i -n -P | grep <port_number>
 ```
+
 </b></details>
 
 <details>
@@ -1760,16 +1590,16 @@ Technically, yes.
 <details>
 <summary>Which port is used in each of the following protocols?:
 
-  * SSH
-  * HTTP
-  * DNS
-  * HTTPS</summary><br><b>
+- SSH
+- HTTP
+- DNS
+- HTTPS</summary><br><b>
 
-  * SSH - 22
-  * HTTP - 80
-  * DNS - 53
-  * HTTPS - 443
-</b></details>
+- SSH - 22
+- HTTP - 80
+- DNS - 53
+- HTTPS - 443
+  </b></details>
 
 <details>
 <summary>What is the routing table? How do you view it?</summary><br><b>
@@ -1806,9 +1636,9 @@ One way would be `ping6 ff02::1`
 
 You can specify one or more of the following:
 
- * <code>dig</code>
- * <code>nslookup</code>
-</b></details>
+- <code>dig</code>
+- <code>nslookup</code>
+  </b></details>
 
 ##### Packaging
 
@@ -1849,7 +1679,7 @@ Upstart: add Upstart init script at /etc/init/service.conf
 
 1. SSH server is not installed
 2. SSH server is not running
-</b></details>
+   </b></details>
 
 <details>
 <summary>How to print the shared libraries required by a certain program? What is it useful for?</summary><br><b>
@@ -1872,8 +1702,8 @@ Upstart: add Upstart init script at /etc/init/service.conf
 <details>
 <summary>How to add a new user to the system without providing him the ability to log-in into the system?</summary><br><b>
 
-  * adduser user_name --shell=/bin/false --no-create-home
-</b></details>
+- adduser user_name --shell=/bin/false --no-create-home
+  </b></details>
 
 <details>
 <summary>What can you do if you lost/forogt the root password?</summary><br><b>
@@ -1910,6 +1740,7 @@ It's used in commands to mark the end of commands options. One common example is
 </b></details>
 
 <a name="linux-advanced"></a>
+
 #### :star: Advanced
 
 #### System Calls
@@ -1956,16 +1787,16 @@ Executes a program. The program is passed as a filename (or path) and must be a 
 <details>
 <summary>What happens when you execute <code>ls -l</code>?</summary><br><b>
 
-* Shell reads the input using getline() which reads the input file stream and stores into a buffer as a string
-* The buffer is broken down into tokens and stored in an array this way: {"ls", "-l", "NULL"}
-* Shell checks if an expansion is required (in case of ls *.c)
+- Shell reads the input using getline() which reads the input file stream and stores into a buffer as a string
+- The buffer is broken down into tokens and stored in an array this way: {"ls", "-l", "NULL"}
+- Shell checks if an expansion is required (in case of ls \*.c)
 
-* Once the program in memory, its execution starts. First by calling readdir()
+- Once the program in memory, its execution starts. First by calling readdir()
 
 Notes:
 
-* getline() originates in GNU C library and used to read lines from input stream and stores those lines in the buffer
-</b></details>
+- getline() originates in GNU C library and used to read lines from input stream and stores those lines in the buffer
+  </b></details>
 
 <details>
 <summary>What happens when you execute <code>ls -l *.log</code>?</summary><br><b>
@@ -1973,7 +1804,6 @@ Notes:
 
 <details>
 <summary>What readdir() system call does?</summary><br><b>
-
 
 </b></details>
 
@@ -1983,11 +1813,11 @@ Notes:
 <summary>How to create a file of a certain size?</summary><br><b>
 
 There are a couple of ways to do that:
-  
-  * dd if=/dev/urandom of=new_file.txt bs=2MB count=1
-  * truncate -s 2M new_file.txt
-  * fallocate -l 2097152 new_file.txt
-</b></details>
+
+- dd if=/dev/urandom of=new_file.txt bs=2MB count=1
+- truncate -s 2M new_file.txt
+- fallocate -l 2097152 new_file.txt
+  </b></details>
 
 <details>
 <summary>Can you describe how processes are being created?</summary><br><b>
@@ -2000,6 +1830,7 @@ There are a couple of ways to do that:
 open("/my/file") = 5
 read(5, "file content")
 ```
+
 </summary><br><b>
 
 These system calls are reading the file <code>/my/file</code> and 5 is the file descriptor number.
@@ -2075,6 +1906,7 @@ MemAvailable - The amount of available memory for new workloads (without pushing
 ## Operating System
 
 <a name="operating-system-beginner"></a>
+
 #### :baby: Beginner
 
 <details>
@@ -2098,21 +1930,21 @@ A process is a running program. A program is one or more instructions and the pr
 
 It would support the following:
 
-* Create - allow to create new processes 
-* Delete - allow to remove/destroy processes
-* State - allow to check the state of the process, whether it's running, stopped, waiting, etc.
-* Stop - allow to stop a running process
-</b></details>
+- Create - allow to create new processes
+- Delete - allow to remove/destroy processes
+- State - allow to check the state of the process, whether it's running, stopped, waiting, etc.
+- Stop - allow to stop a running process
+  </b></details>
 
 <details>
 <summary>How a process is created?</summary><br><b>
 
-* The OS is reading program's code and any additional relevant data
-* Program's bytes are loaded into the memory or more specifically, into the address space of the process.
-* Memory is allocated for program's stack (aka run-time stack). The stack also initialized by the OS with data like argv, argc and parameters to main()
-* Memory is allocated for program's heap which is required for data structures like linked lists and hash tables
-* I/O initialization tasks like in Unix/Linux based systems where each process has 3 file descriptors (input, output and error)
-* OS is running the program, strarting from main()
+- The OS is reading program's code and any additional relevant data
+- Program's bytes are loaded into the memory or more specifically, into the address space of the process.
+- Memory is allocated for program's stack (aka run-time stack). The stack also initialized by the OS with data like argv, argc and parameters to main()
+- Memory is allocated for program's heap which is required for data structures like linked lists and hash tables
+- I/O initialization tasks like in Unix/Linux based systems where each process has 3 file descriptors (input, output and error)
+- OS is running the program, strarting from main()
 
 Note: The loading of the program's code into the memory done lazily which means the OS loads only partial relevant pieces required for the process to run and not the entire code.
 </b></details>
@@ -2126,10 +1958,10 @@ False. It was true in the past but today's operating systems perform lazy loadin
 <details>
 <summary>What are different states of a process?</summary><br><b>
 
-* Running - it's executing instructions
-* Ready - it's ready to run but for different reasons it's on hold
-* Blocked - it's waiting for some operation to complete. For example I/O disk request
-</b></details>
+- Running - it's executing instructions
+- Ready - it's ready to run but for different reasons it's on hold
+- Blocked - it's waiting for some operation to complete. For example I/O disk request
+  </b></details>
 
 #### Concurrency
 
@@ -2149,6 +1981,7 @@ Cache: Cache is usually used when processes reading and writing to the disk to m
 ## Virtualization
 
 <a name="virtualization-beginner"></a>
+
 #### :baby: Beginner
 
 <details>
@@ -2171,16 +2004,17 @@ It's used by one entity until this entity decides to get rid of it. Take for exa
 ## Ansible
 
 <a name="ansible-beginner"></a>
+
 #### :baby: Beginner
 
 <details>
 <summary>Describe each of the following components in Ansible, including the relationship between them:
 
-  * Task
-  * Module
-  * Play
-  * Playbook
-  * Role</summary><br><b>
+- Task
+- Module
+- Play
+- Playbook
+- Role</summary><br><b>
 
 Task – a call to a specific Ansible module
 Module – the actual unit of code executed by Ansible on your own host or a remote host. Modules are indexed by category (database, file, network, …) and also referred as task plugins.
@@ -2197,11 +2031,11 @@ Role – Ansible roles allows you to group resources based on certain functional
 
 Ansible is:
 
-* Agentless
-* Minimal run requirements (Python & SSH) and simple to use
-* Default mode is "push" (it supports also pull)
-* Focus on simpleness and ease-of-use
-</b></details>
+- Agentless
+- Minimal run requirements (Python & SSH) and simple to use
+- Default mode is "push" (it supports also pull)
+- Focus on simpleness and ease-of-use
+  </b></details>
 
 <details>
 <summary>What kind of automation you wouldn't do with Ansible and why?</summary><br><b>
@@ -2228,6 +2062,7 @@ An example of inventory file:
 190.40.2.21
 190.40.2.22
 ```
+
 </b></details>
 
 <details>
@@ -2244,7 +2079,7 @@ spun up and shut down, without you tracking every change in these sources.
 
 1. Ansible online docs
 2. `ansible-doc -l` for list of modules and `ansible [module_name]` for detailed information on a specific module
-</b></details>
+   </b></details>
 
 <details>
 <summary>Write a task to create the directory ‘/tmp/new_directory’</summary><br><b>
@@ -2255,6 +2090,7 @@ spun up and shut down, without you tracking every change in these sources.
     path: "/tmp/new_directory"
     state: directory
 ```
+
 </b></details>
 
 <details>
@@ -2276,7 +2112,7 @@ spun up and shut down, without you tracking every change in these sources.
 ---
 - name: Print information about my host
   hosts: localhost
-  gather_facts: 'no'                                                                                                                                                                           
+  gather_facts: 'no'
   tasks:
       - name: Print hostname
         debug:
@@ -2297,6 +2133,7 @@ When given a written code, always inspect it thoroughly. If your answer is “th
           name: zlib
           state: present
 ```
+
 </summary><br><b>
 </b></details>
 
@@ -2329,7 +2166,7 @@ When given a written code, always inspect it thoroughly. If your answer is “th
   vars:
       mario_file: /tmp/mario
       package_list:
-          - 'zlib' 
+          - 'zlib'
           - 'vim'
   tasks:
       - name: Check for mario file
@@ -2345,6 +2182,7 @@ When given a written code, always inspect it thoroughly. If your answer is “th
         with_items: "{{ package_list }}"
         when: mario_f.stat.exists
 ```
+
 </b></details>
 
 <details>
@@ -2357,27 +2195,28 @@ When given a written code, always inspect it thoroughly. If your answer is “th
       - item.stat.exists
   loop: "{{ files_list }}"
 ```
+
 </b></details>
 
 <details>
 <summary>Write a playbook to deploy the file ‘/tmp/system_info’ on all hosts except for controllers group, with the following content</summary><br><b>
 
-  ```
-  I'm <HOSTNAME> and my operating system is <OS>
-  ```
+```
+I'm <HOSTNAME> and my operating system is <OS>
+```
 
-  Replace <HOSTNAME> and  <OS> with the actual data for the specific host you are running on
+Replace <HOSTNAME> and <OS> with the actual data for the specific host you are running on
 
 The playbook to deploy the system_info file
 
 ```
---- 
+---
 - name: Deploy /tmp/system_info file
   hosts: all:!controllers
-  tasks: 
+  tasks:
       - name: Deploy /tmp/system_info
         template:
-            src: system_info.j2 
+            src: system_info.j2
             dest: /tmp/system_info
 ```
 
@@ -2387,15 +2226,16 @@ The content of the system_info.j2 template
 # {{ ansible_managed }}
 I'm {{ ansible_hostname }} and my operating system is {{ ansible_distribution }
 ```
+
 </b></details>
 
 <details>
 <summary>The variable 'whoami' defined in the following places:
 
-  * role defaults -> whoami: mario
-  * extra vars (variables you pass to Ansible CLI with -e) -> whoami: toad
-  * host facts -> whoami: luigi
-  * inventory variables (doesn’t matter which type) -> whoami: browser
+- role defaults -> whoami: mario
+- extra vars (variables you pass to Ansible CLI with -e) -> whoami: toad
+- host facts -> whoami: luigi
+- inventory variables (doesn’t matter which type) -> whoami: browser
 
 According to variable precedence, which one will be used?</summary><br><b>
 
@@ -2411,15 +2251,15 @@ A full list can be found at the link above. Also, note there is a significant di
 <details>
 <summary>For each of the following statements determine if it's true or false:
 
-  * A module is a collection of tasks
-  * It’s better to use shell or command instead of a specific module
-  * Host facts override play variables
-  * A role might include the following: vars, meta, and handlers
-  * Dynamic inventory is generated by extracting information from external sources
-  * It’s a best practice to use indention of 2 spaces instead of 4
-  * ‘notify’ used to trigger handlers
-  * This “hosts: all:!controllers” means ‘run only on controllers group hosts</summary><br><b>
-</b></details>
+- A module is a collection of tasks
+- It’s better to use shell or command instead of a specific module
+- Host facts override play variables
+- A role might include the following: vars, meta, and handlers
+- Dynamic inventory is generated by extracting information from external sources
+- It’s a best practice to use indention of 2 spaces instead of 4
+- ‘notify’ used to trigger handlers
+- This “hosts: all:!controllers” means ‘run only on controllers group hosts</summary><br><b>
+  </b></details>
 
 <details>
 <summary>What is ansible-pull? How is it different from how ansible-playbook works?</summary><br><b>
@@ -2432,12 +2272,13 @@ A full list can be found at the link above. Also, note there is a significant di
 <details>
 <summary>Demonstrate each of the following with Ansible:
 
-  * Conditionals
-  * Loops
-</summary><br><b>
-</b></details>
+- Conditionals
+- Loops
+  </summary><br><b>
+  </b></details>
 
 <a name="ansible-advanced"></a>
+
 #### :star: Advanced
 
 <details>
@@ -2451,6 +2292,7 @@ A full list can be found at the link above. Also, note there is a significant di
 def cap(self, string):
     return string.capitalize()
 ```
+
 </b></details>
 
 <details>
@@ -2479,6 +2321,7 @@ Vegeta = 250
 Trunks = 40
 Gotenks = 32
 ```
+
 </summary><br><b>
 
 ```
@@ -2492,6 +2335,7 @@ Gotenks = 32
     - { regexp: '^Trunks', line: 'Trunks = 40' }
     ...
 ```
+
 </b></details>
 
 #### Ansible Testing
@@ -2511,6 +2355,7 @@ Gotenks = 32
 ## Terraform
 
 <a name="terraform-beginner"></a>
+
 #### :baby: Beginner
 
 <details>
@@ -2526,21 +2371,21 @@ Read [here](https://www.terraform.io/intro/index.html#what-is-terraform-)
 - version control for your infrastructure which allows you to quickly rollback to previous versions
 - validate infrastructure quality and stability with automated tests and code reviews
 - makes infrastructure tasks less repetitive
-</b></details>
+  </b></details>
 
 <details>
 <summary>Why Terraform and not other technologies? (e.g. Ansible, Puppet, CloufFormation)</summary><br><b>
 
-A common *wrong* answer is to say that Ansible and Puppet are configuration management tools
+A common _wrong_ answer is to say that Ansible and Puppet are configuration management tools
 and Terraform is a provisioning tool. While technically true, it doesn't mean Ansible and Puppet can't
 be used for provisioning infrastructure. Also, it doesn't explain why Terraform should be used over
 CloudFormation if at all.
 
 The benefits of Terraform over the other tools:
 
-  * It follows the immutable infrastructure approach which has benefits like avoiding a configuration drift over time
-  * Ansible and Puppet are more procedural (you mention what to execute in each step) and Terraform is declarative since you describe the overall desired state and not per resource or task. You can give the example of going from 1 to 2 servers in each tool. In Terraform you specify 2, in Ansible and puppet you have to only provision 1 additional server so you need to explicitly make sure you provision only another one server.
-</b></details>
+- It follows the immutable infrastructure approach which has benefits like avoiding a configuration drift over time
+- Ansible and Puppet are more procedural (you mention what to execute in each step) and Terraform is declarative since you describe the overall desired state and not per resource or task. You can give the example of going from 1 to 2 servers in each tool. In Terraform you specify 2, in Ansible and puppet you have to only provision 1 additional server so you need to explicitly make sure you provision only another one server.
+  </b></details>
 
 <details>
 <summary>Explain what is "Terraform configuration"</summary><br><b>
@@ -2555,17 +2400,17 @@ HCL stands for Hashicorp Configuration Language. It is the language Hashicorp ma
 <details>
 <summary>Explain each of the following:
 
-  * Provider
-  * Resource 
-  * Provisioner 
-</summary><br><b>
-  * Provider is any cloud based technology - github, aws, postgresql etc - which one can make an API call to with its unique terraform provider binary to provision available services and components.<br>  
-  * Resources are the services and components you provision on these platforms.<br>
-  * Provisioner in terraform's lingo specifically refers to configuration tools like ansible or salt-stack which are used in combination with terraform to orchestrate a system.
-</b></details>
+- Provider
+- Resource
+- Provisioner
+  </summary><br><b>
+- Provider is any cloud based technology - github, aws, postgresql etc - which one can make an API call to with its unique terraform provider binary to provision available services and components.<br>
+- Resources are the services and components you provision on these platforms.<br>
+- Provisioner in terraform's lingo specifically refers to configuration tools like ansible or salt-stack which are used in combination with terraform to orchestrate a system.
+  </b></details>
 
 <details>
-<summary>What <code>terraform.tfstate</code> file is used for?</summary><br><b> 
+<summary>What <code>terraform.tfstate</code> file is used for?</summary><br><b>
 
 It keeps track of the IDs of created resources so that Terraform knows what it is managing.
 </b></details>
@@ -2573,11 +2418,11 @@ It keeps track of the IDs of created resources so that Terraform knows what it i
 <details>
 <summary>Explain what the following commands do:
 
-  * <code>terraform init</code> 
-  * <code>terraform plan</code>	
-  * <code>terraform validate</code> 
-  * <code>terraform apply</code> 
-</summary><br><b>
+- <code>terraform init</code>
+- <code>terraform plan</code>
+- <code>terraform validate</code>
+- <code>terraform apply</code>
+  </summary><br><b>
 
 <code>terraform init</code> scans your code to figure which providers are you using and download them.
 <code>terraform plan</code> will let you see what terraform is about to do before actually doing it.
@@ -2632,10 +2477,11 @@ tuple([<TYPE>, ...])
 Data sources lookup or compute values that can be used elsewhere in terraform configuration.
 
 There are quite a few cases you might need to use them:
-* you want to reference resources not managed through terraform
-* you want to reference resources managed by a different terraform module
-* you want to cleanly compute a value with typechecking, such as with <code>aws_iam_policy_document</code>
-</b></details>
+
+- you want to reference resources not managed through terraform
+- you want to reference resources managed by a different terraform module
+- you want to cleanly compute a value with typechecking, such as with <code>aws_iam_policy_document</code>
+  </b></details>
 
 <details>
 <summary>What are output variables and what <code>terraform output</code> does?</summary><br><b>
@@ -2654,8 +2500,8 @@ Output variables are named values that are sourced from the attributes of a modu
 <summary>Explain <code>remote-exec</code> and <code>local-exec</code></summary><br><b>
 </b></details>
 
-
 <a name="terraform-advanced"></a>
+
 #### :star: Advanced
 
 <details>
@@ -2705,22 +2551,24 @@ The primary difference between containers and VMs is that containers allow you t
 multiple workloads on the operating system while in the case of VMs the hardware is being virtualized to
 run multiple machines each with its own OS.
 
-* Containers don't require an entire guest operating system as VMs
-* It's usually takes a few seconds to set up a container as opposed to VMs which can take minutes or at least more time than containers as there is an entire OS to boot and initialize as opposed to container where you mainly lunch the app itself
-* Docker is one of the technologies allowing you to manage containers - run multiple containers on a host, move containers between hosts, etc.
-</b></details>
+- Containers don't require an entire guest operating system as VMs
+- It's usually takes a few seconds to set up a container as opposed to VMs which can take minutes or at least more time than containers as there is an entire OS to boot and initialize as opposed to container where you mainly lunch the app itself
+- Docker is one of the technologies allowing you to manage containers - run multiple containers on a host, move containers between hosts, etc.
+  </b></details>
 
 <details>
 <summary>In which scenarios would you use containers and in which you would prefer to use VMs?</summary><br><b>
 
 You should choose VMs when:
-  * you need run an application which requires all the resources and functionalities of an OS
-  * you need full isolation and security
+
+- you need run an application which requires all the resources and functionalities of an OS
+- you need full isolation and security
 
 You should choose containers when:
-  * you need a lightweight solution
-  * Running multiple versions or instances of a single application
-</b></details>
+
+- you need a lightweight solution
+- Running multiple versions or instances of a single application
+  </b></details>
 
 <details>
 <summary>Explain Docker architecture</summary><br><b>
@@ -2758,13 +2606,13 @@ Create a new image from a container’s changes
 <details>
 <summary>Explain what each of the following commands do:
 
-  * docker run
-  * docker rm
-  * docker ps
-  * docker pull
-  * docker build
-  * docker commit</summary><br><b>
-</b></details>
+- docker run
+- docker rm
+- docker ps
+- docker pull
+- docker build
+- docker commit</summary><br><b>
+  </b></details>
 
 <details>
 <summary>How do you remove old, non running, containers?</summary><br><b>
@@ -2815,9 +2663,9 @@ For example, you can use it to set up ELK stack where the services are: elastics
 <details>
 <summary>Describe the process of using Docker Compose</summary><br><br>
 
-* Define the services you would like to run together in a docker-compose.yml file
-* Run `docker-compose up` to run the services
-</b></details>
+- Define the services you would like to run together in a docker-compose.yml file
+- Run `docker-compose up` to run the services
+  </b></details>
 
 <details>
 <summary>Explain Docker interlock</summary><br><b>
@@ -2856,6 +2704,7 @@ Because each container has its own writable container layer, and all changes are
 </b></details>
 
 <a name="docker-advanced"></a>
+
 #### :star: Advanced
 
 <details>
@@ -2877,6 +2726,7 @@ Because each container has its own writable container layer, and all changes are
 ## Kubernetes
 
 <a name="kubernetes-beginner"></a>
+
 #### :baby: Beginner
 
 <details>
@@ -2886,12 +2736,12 @@ Kubernetes is an open-source system for automating deployment, scaling, and mana
 
 To understand what Kubernetes is good for, let's look at some examples:
 
-* You would like to run a certain application in a container on multiple different locations. Sure, if it's 2-3 servers/locations, you can do it by yourself but it can be challenging to scale. Also, running them is not only running the container but also react on different events.
+- You would like to run a certain application in a container on multiple different locations. Sure, if it's 2-3 servers/locations, you can do it by yourself but it can be challenging to scale. Also, running them is not only running the container but also react on different events.
 
-* Performing updates and changes across hundreds of containers
+- Performing updates and changes across hundreds of containers
 
-* Handle cases where the current load requires to scale up (or down)
-</b></details>
+- Handle cases where the current load requires to scale up (or down)
+  </b></details>
 
 <details>
 <summary>Describe the architecture of Kubernetes</summary><br><b>
@@ -2908,10 +2758,10 @@ A cluster consists of a Master (which coordinates the cluster) and Nodes where t
 
 The master coordinates all the workflows in the cluster:
 
-* Scheduling applications
-* Managing desired state
-* Rolling out new updates
-</b></details>
+- Scheduling applications
+- Managing desired state
+- Rolling out new updates
+  </b></details>
 
 <details>
 <summary>What is a Node?</summary><br><b>
@@ -2977,16 +2827,16 @@ Setting the replicas to 0 will shut down the process. Now start it with `kubectl
 <details>
 <summary>How do you:
 
-  * Check the cluster status?
-  * Check the status of the nodes?</summary><br><b>
-</b></details>
+- Check the cluster status?
+- Check the status of the nodes?</summary><br><b>
+  </b></details>
 
 <details>
 <summary>What the following commands do?
 
-  * kubectl get nodes
-  * kubectl </summary><br><b>
-</b></details>
+- kubectl get nodes
+- kubectl </summary><br><b>
+  </b></details>
 
 <details>
 <summary>What is kubconfig? What do you use it for?</summary><br><b>
@@ -2995,6 +2845,7 @@ Setting the replicas to 0 will shut down the process. Now start it with `kubectl
 ## Coding
 
 <a name="coding-beginner"></a>
+
 #### :baby: Beginner
 
 <details>
@@ -3018,17 +2869,17 @@ Statements are instructions executed by the interpreter like variable assignment
 
 SOLID design principals are about:
 
-* Make it easier to extend the functionality of the system
-* Make the code more readable and easier to maintain
+- Make it easier to extend the functionality of the system
+- Make the code more readable and easier to maintain
 
 SOLID is:
 
-* Single Responsibility - A class should only have a single responsibility
-* Open-Closed - An entity should be open for extension, but closed for modification. What this practically means is that you should extend functionality by adding a new code and not by modifying it. Your system should be separated into components so it can be easily extended without breaking everything.
-* Liskov Substitution - Any derived class should be able to substitute the its parent without altering its corrections. Practically, every part of the code will get the expected result no matter which part is using it
-* Interface segregation - A client should never depend on anything it doesn't uses 
-* Dependency Inversion - High level modules should depend on abstractions, not low level modules
-</b></details>
+- Single Responsibility - A class should only have a single responsibility
+- Open-Closed - An entity should be open for extension, but closed for modification. What this practically means is that you should extend functionality by adding a new code and not by modifying it. Your system should be separated into components so it can be easily extended without breaking everything.
+- Liskov Substitution - Any derived class should be able to substitute the its parent without altering its corrections. Practically, every part of the code will get the expected result no matter which part is using it
+- Interface segregation - A client should never depend on anything it doesn't uses
+- Dependency Inversion - High level modules should depend on abstractions, not low level modules
+  </b></details>
 
 <details>
 <summary>What are the four pillars of object oriented programming?</summary><br><b>
@@ -3059,11 +2910,11 @@ SOLID is:
 <details>
 <summary>Binary search:
 
-  * How it works?
-  * Can you implement it? (in any language you prefer)
-  * What is the average performance of the algorithm you wrote?</summary><br><b>
+- How it works?
+- Can you implement it? (in any language you prefer)
+- What is the average performance of the algorithm you wrote?</summary><br><b>
 
-It's a search algorithm used with sorted arrays/lists to find a target value by dividing the array each iteration and comparing the middle value to the target value. If the middle value is smaller than target value, then the target value is searched in the right part of the divided array, else in the left side. This continues until the value is found (or the array divided max times) 
+It's a search algorithm used with sorted arrays/lists to find a target value by dividing the array each iteration and comparing the middle value to the target value. If the middle value is smaller than target value, then the target value is searched in the right part of the divided array, else in the left side. This continues until the value is found (or the array divided max times)
 
 [python implementation](coding/python/binary_search.py)
 
@@ -3079,9 +2930,9 @@ The average performance of the above algorithm is O(log n). Best performance can
 <details>
 <summary>Do you agree/disagree with each of the following statements and why?:
 
-  * The commit message is not important. When reviewing a change/patch one should focus on the actual change
-  * You shouldn't test your code before submitting it. This is what CI/CD exists for.</summary><br><b>
-</b></details>
+- The commit message is not important. When reviewing a change/patch one should focus on the actual change
+- You shouldn't test your code before submitting it. This is what CI/CD exists for.</summary><br><b>
+  </b></details>
 
 #### Strings
 
@@ -3104,20 +2955,20 @@ The average performance of the above algorithm is O(log n). Best performance can
 <details>
 <summary>Describe what would be the time complexity of the operations <code>access</code>, <code>search</code> <code>insert</code> and <code>remove</code> for the following data structures:</summary><br><b>
 
-  * Stack
-  * Queue
-  * Linked List
-  * Binary Search Tree
-</b></details>
+- Stack
+- Queue
+- Linked List
+- Binary Search Tree
+  </b></details>
 
 <details>
 <summary>What is the complexity for the best, worst and average cases of each of the following algorithms?:
 
-  * Quick sort
-  * Merge sort
-  * Bucket Sort
-  * Radix Sort</summary><br><b>
-</b></details>
+- Quick sort
+- Merge sort
+- Bucket Sort
+- Radix Sort</summary><br><b>
+  </b></details>
 
 #### Data Structures & Types
 
@@ -3134,6 +2985,7 @@ The average performance of the above algorithm is O(log n). Best performance can
 </b></details>
 
 <a name="coding-advanced"></a>
+
 #### :star: Advanced
 
 <details>
@@ -3159,11 +3011,13 @@ def find_triplets_sum_to_zero(li):
                 low += 1
                 up -= 1
 ```
+
 </b></details>
 
 ## Python
 
 <a name="python-beginner"></a>
+
 #### :baby: Beginner
 
 <details>
@@ -3180,6 +3034,7 @@ def find_triplets_sum_to_zero(li):
 
 There are many other characteristics but these are the main ones that every python programmer should know.
 ```
+
 </b></details>
 
 <details>
@@ -3193,6 +3048,7 @@ There are many other characteristics but these are the main ones that every pyth
     Bool
     Tuple
     Frozenset
+
 </b></details>
 
 <details>
@@ -3205,7 +3061,7 @@ The mutable data types are:
     List
     Dictionary
     Set
-    
+
 The immutable data types are:
 
     Numbers (int, float, ...)
@@ -3246,13 +3102,16 @@ char = input("Insert a character: ")
 if char == "a" or char == "y" or  char == "o" or char == "e" or char =="u" or char == "i":
     print("It's a vowel!")
 ```
+
 </summary><br><b>
 
 ```
 if lower(input("Insert a character: ")[0]) in "aieou": # Takes care of multiple characters and small/Capital cases
     print("It's a vowel!")
 ```
+
 OR
+
 ```
 char = input("Insert a character: ") # For readablity
 if lower(char[0]) in "aieou": # Takes care of multiple characters and separate cases
@@ -3326,6 +3185,7 @@ Calling super() calls the Base method, thus, calling super().__init__() we calle
 
 There is a more advanced python feature called MetaClasses that aid the programmer to directly control class creation.
 ```
+
 </b></details>
 
 <details>
@@ -3340,6 +3200,7 @@ class MyClass(object):
     def __init__(self, y):
         self.y = y
 ```
+
 </b></details>
 
 <details>
@@ -3352,31 +3213,31 @@ class MyClass(object):
 Generally, every compiling process have a two steps.
     - Analysis
     - Code Generation.
-    
+
     Analysis can be broken into:
         1. Lexical analysis   (Tokenizes source code)
         2. Syntactic analysis (Check whether the tokens are legal or not, tldr, if syntax is correct)
-           
+
                for i in 'foo'
                           ^
              SyntaxError: invalid syntax
-        
+
         We missed ':'
-        
-        
+
+
         3. Semantic analysis  (Contextual analysis, legal syntax can still trigger errors, did you try to divide by 0,
           hash a mutable object or use an undeclared function?)
-          
+
                  1/0
                 ZeroDivisionError: division by zero
-        
+
     These three analysis steps are the responsible for error handlings.
-    
+
     The second step would be responsible for errors, mostly syntax errors, the most common error.
     The third step would be responsible for Exceptions.
-    
+
     As we have seen, Exceptions are semantic errors, there are many builtin Exceptions:
-        
+
         ImportError
         ValueError
         KeyError
@@ -3384,25 +3245,26 @@ Generally, every compiling process have a two steps.
         IndentationError
         IndexError
         ...
-    
+
     You can also have user defined Exceptions that have to inherit from the `Exception` class, directly or indirectly.
 
     Basic example:
-        
+
     class DividedBy2Error(Exception):
         def __init__(self, message):
             self.message = message
-    
-    
+
+
     def division(dividend,divisor):
         if divisor == 2:
             raise DividedBy2Error('I dont want you to divide by 2!')
         return dividend / divisor
-    
+
     division(100, 2)
-    
+
     >>> __main__.DividedBy2Error: I dont want you to divide by 2!
 ```
+
 </b></details>
 
 <details>
@@ -3410,12 +3272,11 @@ Generally, every compiling process have a two steps.
 	
 **Exceptions:** Errors detected during execution are called Exceptions.
 
-**Handling Exception:** When an error occurs, or exception as we call it, Python will normally stop and generate an error message.</br> 
+**Handling Exception:** When an error occurs, or exception as we call it, Python will normally stop and generate an error message.</br>
 Exceptions can be handled using `try` and `except` statement in python.
 
 **Example:** Following example asks the user for input until a valid integer has been entered. </br>
 If user enter a non-integer value it will raise exception and using except it will catch that exception and ask the user to enter valid integer again.
-
 
 ```py
 while True:
@@ -3436,8 +3297,8 @@ For more details about errors and exceptions follow this [https://docs.python.or
 
 1. Translation lookup in i18n
 2. Hold the result of the last executed expression or statement in the interactive interpreter.
-3. As a general purpose "throwaway" variable name. For example: x, y, _ = get_data() (x and y are used but since we don't care about third variable, we "threw it away").
-</b></details>
+3. As a general purpose "throwaway" variable name. For example: x, y, \_ = get_data() (x and y are used but since we don't care about third variable, we "threw it away").
+   </b></details>
 
 <details>
 <summary>Explain what is GIL</summary><br><b>
@@ -3450,30 +3311,31 @@ A <code>lambda</code> expression is an 'anonymous' function, the difference from
 
 The syntax is:
 
-```lambda[parameters]: [expresion]```
+`lambda[parameters]: [expresion]`
 
 **Examples:**
 
-* A lambda function add 10 with any argument passed.
+- A lambda function add 10 with any argument passed.
 
 ```py
 x = lambda a: a + 10
 print(x(10))
 ```
 
-* An addition function
+- An addition function
 
 ```py
 addition = lambda x, y: x + y
 print(addition(10, 20))
 ```
 
-* Squaring function
+- Squaring function
 
 ```py
 square = lambda x : x ** 2
 print(square(5))
 ```
+
 Generally it is considered a bad practice under PEP 8 to assign a lambda expresion, they are meant to be used as parameters and inside of other defined functions.
 
 </b></details>
@@ -3487,10 +3349,10 @@ Generally it is considered a bad practice under PEP 8 to assign a lambda expresi
 <details>
 <summary>Explain the following:
 
-* getter
-* setter
-* deleter</summary><br><b>
-</b></details>
+- getter
+- setter
+- deleter</summary><br><b>
+  </b></details>
 
 <details>
 <summary>Explain what is @property</summary><br><b>
@@ -3502,14 +3364,15 @@ Generally it is considered a bad practice under PEP 8 to assign a lambda expresi
 ```
 x, y = y, x
 ```
+
 </b></details>
 
 <details>
 <summary>Explain the following object's magic variables:
 
-  * __dict__ 
-</summary><br><b>
-</b></details>
+- **dict**
+  </summary><br><b>
+  </b></details>
 
 <details>
 <summary>Write a function to return the sum of one or more numbers. The user will decide how many numbers to use</summary><br><b>
@@ -3527,6 +3390,7 @@ def return_sum():
 	return total_sum
 
 ```
+
 </b></details>
 
 <details>
@@ -3536,6 +3400,7 @@ def return_sum():
 li = [2, 5, 6]
 print("{0:.3f}".format(sum(li)/len(li)))
 ```
+
 </b></details>
 
 #### Python Lists
@@ -3554,6 +3419,7 @@ Maximum: max(some_list)
 Minimum: min(some_list)
 Last item: some_list[-1]
 ```
+
 </b></details>
 
 <details>
@@ -3569,6 +3435,7 @@ Or
 some_list.sort(reverse=True)
 some_list[:3]
 ```
+
 </b></details>
 
 <details>
@@ -3583,17 +3450,18 @@ Or without creating a new list:
 ```
 li.sort(key=len)
 ```
+
 </b></details>
 
 <details>
 <summary>Do you know what is the difference between list.sort() and sorted(list)?</summary><br><b>
 
-* sorted(list) will return a new list (original list doesn't change)
-* list.sort() will return None but the list is change in-place
+- sorted(list) will return a new list (original list doesn't change)
+- list.sort() will return None but the list is change in-place
 
-* sorted() works on any iterable (Dictionaries, Strings, ...)
-* list.sort() is faster than sorted(list) in case of Lists
-</b></details>
+- sorted() works on any iterable (Dictionaries, Strings, ...)
+- list.sort() is faster than sorted(list) in case of Lists
+  </b></details>
 
 <details>
 <summary>Convert every string to an integer: <code>[['1', '2', '3'], ['4', '5', '6']]</code></summary><br><b>
@@ -3602,13 +3470,14 @@ li.sort(key=len)
 nested_li = [['1', '2', '3'], ['4', '5', '6']]
 [[int(x) for x in li] for li in nested_li]
 ```
+
 </b></details>
 
 <details>
 <summary>How to merge two sorted lists into one sorted list?</summary><br><b>
 
 ```
-sorted(li1 + li2) 
+sorted(li1 + li2)
 ```
 
 Another way:
@@ -3625,8 +3494,9 @@ while i < len(li1) and j < len(li2):
         merged_li.append(li2[j])
         j += 1
 
-merged_li = merged_li + merged_li[i:] + merged_li[j:] 
+merged_li = merged_li + merged_li[i:] + merged_li[j:]
 ```
+
 </b></details>
 
 <details>
@@ -3672,6 +3542,7 @@ This one might look more convulated but hey, one liners.
 def is_unique4(l:list) -> bool:
     return all(map(lambda x: l.count(x) < 2, l))
 ```
+
 </details>
 
 <details>
@@ -3679,11 +3550,12 @@ def is_unique4(l:list) -> bool:
 
 ```
 def my_func(li = []):
-    li.append("hmm")  
+    li.append("hmm")
     print(li)
 ```
 
 If we call it 3 times, what would be the result each call?
+
 </summary><br><b>
 
 ```
@@ -3691,24 +3563,28 @@ If we call it 3 times, what would be the result each call?
 ['hmm', 'hmm']
 ['hmm', 'hmm', 'hmm']
 ```
+
 </b></details>
 
 <details>
 <summary>How to iterate over a list in reverse order?</summary><br><b>
 
 Method 1
+
 ```
 for i in reversed(li):
     ...
 ```
 
 Method 2
+
 ```
 n = len(li) - 1
 while n > 0:
     ...
     n -= 1
 ```
+
 </b></details>
 
 <details>
@@ -3725,6 +3601,7 @@ or
 ```
 li.sort(key=lambda l: l[1)
 ```
+
 </b></details>
 
 <details>
@@ -3736,6 +3613,7 @@ letters = ['x', 'y', 'z']
 
 list(zip(nums, letters))
 ```
+
 </b></details>
 
 #### Dictionaries
@@ -3746,6 +3624,7 @@ list(zip(nums, letters))
 ```
 {k: v for k, v in sorted(x.items(), key=lambda item: item[1])}
 ```
+
 </b></details>
 
 <details>
@@ -3754,6 +3633,7 @@ list(zip(nums, letters))
 ```
 dict(sorted(some_dictionary.items()))
 ```
+
 </b></details>
 
 <details>
@@ -3762,6 +3642,7 @@ dict(sorted(some_dictionary.items()))
 ```
 some_dict1.update(some_dict2)
 ```
+
 </b></details>
 
 ##### Common Algorithms Implementation
@@ -3781,6 +3662,7 @@ some_dict1.update(some_dict2)
 with open('file.txt', 'w') as file:
     file.write("My insightful comment")
 ```
+
 </b></details>
 
 <details>
@@ -3874,6 +3756,7 @@ def get_food(brothers_menu) -> set:
 # One liner way (Using list comprehension)
 set([food for bro in x for food in bro['food']])
 ```
+
 </b></details>
 
 <details>
@@ -3889,6 +3772,7 @@ set([food for bro in x for food in bro['food']])
 x = "itssssssameeeemarioooooo"
 y = ''.join(set(x))
 ```
+
 </b></details>
 
 <details>
@@ -3951,6 +3835,7 @@ Detailed answer can be found here: http://codingshell.com/python-all-string-perm
 >> " ".join("welladsadgadoneadsadga".split("adsadga")[:2])
 >> "".join(["c", "t", "o", "a", "o", "q", "l"])[0::2]
 ```
+
 </summary><br><b>
 
 ```
@@ -3958,12 +3843,13 @@ Detailed answer can be found here: http://codingshell.com/python-all-string-perm
 >>> 'well done'
 >>> 'cool'
 ```
+
 </b></details>
 
 <details>
 <summary>How to reverse a string? (e.g. pizza -> azzip)</summary><br><b>
 
-The correct way is: 
+The correct way is:
 
 ```
 my_string[::-1]
@@ -3979,6 +3865,7 @@ def reverse_string(string):
         temp =  char + temp
     return temp
 ```
+
 </b></details>
 
 <details>
@@ -4010,10 +3897,10 @@ mario
 <details>
 <summary>Explain the following types of methods and how to use them:
 
-  * Static method
-  * Class method
-  * instance method</summary><br><b>
-</b></details>
+- Static method
+- Class method
+- instance method</summary><br><b>
+  </b></details>
 
 <details>
 <summary>How to reverse a list?</summary><br><b>
@@ -4034,10 +3921,10 @@ the_list.sort(key=lambda x: x[1])
 <details>
 <summary>Explain the following:
 
-  * zip()
-  * map()
-  * filter()</summary><br><b>
-</b></details>
+- zip()
+- map()
+- filter()</summary><br><b>
+  </b></details>
 
 #### Debugging
 
@@ -4057,12 +3944,12 @@ pdb :D
 
 Short answer is: It returns a None object.
 
-We could go a bit deeper and explain the difference between 
+We could go a bit deeper and explain the difference between
 
 ```
 def a ():
     return
-    
+
 >>> None
 ```
 
@@ -4071,9 +3958,10 @@ And
 ```
 def a ():
     pass
-    
+
 >>> None
 ```
+
 Or we could be asked this as a following question, since they both give the same result.
 
 We could use the dis module to see what's going on:
@@ -4101,16 +3989,16 @@ Disassembly of <code object b at 0x0000029C4D3C2ED0, file "<dis>", line 5>:
 ```
 
 An empty <code> return</code> is exactly the same as <code>return None</code> and functions without any explicit return
-will always return None regardless of the operations, therefore 
-
+will always return None regardless of the operations, therefore
 
 ```
 def sum(a, b):
     global c
     c = a + b
-    
+
 >>> None
 ```
+
 </b></details>
 
 <details>
@@ -4121,11 +4009,13 @@ li = []
 for i in range(1, 10):
     li.append(i)
 ```
+
 </summary><br><b>
 
 ```
 [for i in in range(1, 10)]
 ```
+
 </b></details>
 
 <details>
@@ -4138,7 +4028,9 @@ def is_int(num):
     else:
         print('No')
 ```
+
 What would be the result of is_int(2) and is_int(False)?
+
 </summary><br><b>
 </b></details>
 
@@ -4170,6 +4062,7 @@ PEP8 is a list of coding conventions and style guidelines for Python
     3. Use commas when making a tuple of one element
     4. Use spaces (and not tabs) for indentation
     5. Use 4 spaces per indentation level
+
 </b></details>
 
 <details>
@@ -4218,6 +4111,7 @@ PEP8 is a list of coding conventions and style guidelines for Python
 ```
 [(1,), (2,), (3,)]
 ```
+
 </b></details>
 
 <details>
@@ -4227,16 +4121,17 @@ PEP8 is a list of coding conventions and style guidelines for Python
 list(zip(range(5), range(50), range(50)))
 list(zip(range(5), range(50), range(-2)))
 ```
+
 </summary><br><b>
 
 ```
 [(0, 0, 0), (1, 1, 1), (2, 2, 2), (3, 3, 3), (4, 4, 4)]
 []
 ```
+
 </b></details>
 
 #### Misc
-
 
 <details>
 <summary>Implement simple calculator for two numbers</summary><br><b>
@@ -4244,8 +4139,8 @@ list(zip(range(5), range(50), range(-2)))
 ```
 def add(num1, num2):
     return num1 + num2
-        
-        
+
+
 def sub(num1, num2):
     return num1 - num2
 
@@ -4257,11 +4152,11 @@ def mul(num1, num2):
 def div(num1, num2):
     return num1 / num2
 
-operators = { 
+operators = {
     '+': add,
     '-': sub,
     '*': mul,
-    '/': div 
+    '/': div
 }
 
 if __name__ == '__main__':
@@ -4270,10 +4165,11 @@ if __name__ == '__main__':
     num2 = int(input("2nd number: "))
     print(operators[operator](num1, num2))
 ```
+
 </b></details>
 
-
 <a name="python-advanced"></a>
+
 #### :star: Advanced
 
 <details>
@@ -4294,7 +4190,7 @@ def wee(word):
 
 def oh(f):
     return f + "Ohh"
-    
+
 >>> oh(wee("Wee"))
 <<< Wee Ohh
 ```
@@ -4305,10 +4201,11 @@ This allows us to control the before execution of any given function and if we a
 Sometimes we want to control the before-after execution of many functions and it would get tedious to write
 
 <code> f = function(function_1())</code>
-<code> f = function(function_1(function_2(*args)))</code>
+<code> f = function(function_1(function_2(\*args)))</code>
 
 every time, that's what decorators do, they introduce syntax to write all of this on the go, using the keyword '@'.
 </b>
+
 </details>
 
 <details>
@@ -4359,9 +4256,9 @@ a = f("************")
 ```
 
 deco receives a function -> f
-wrapper receives the arguments -> *args, **kwargs
+wrapper receives the arguments -> \*args, \*\*kwargs
 
-wrapper returns the function plus the arguments -> f(*args, **kwargs)
+wrapper returns the function plus the arguments -> f(\*args, \*\*kwargs)
 deco returns wrapper.
 
 As you can see we conveniently do things before and after the execution of a given function.
@@ -4469,6 +4366,7 @@ a = f()
 ## Monitoring
 
 <a name="monitoring-beginner"></a>
+
 #### :baby: Beginner
 
 <details>
@@ -4503,6 +4401,7 @@ Logging
 ## Prometheus
 
 <a name="prometheus-beginner"></a>
+
 #### :baby: Beginner
 
 <details>
@@ -4528,9 +4427,9 @@ Logging
 <details>
 <summary>Describe the following Prometheus components:
 
-  * Prometheus server
-  * Push Gateway
-  * Alert Manager</summary><br><b>
+- Prometheus server
+- Push Gateway
+- Alert Manager</summary><br><b>
 
 Prometheus server responsible for scraping the storing the data<br>
 Push gateway is used for short-lived jobs<br>
@@ -4562,6 +4461,7 @@ Alert manager is responsible for alerts ;)
 </b></details>
 
 <a name="prometheus-advanced"></a>
+
 #### :star: Advanced
 
 <details>
@@ -4579,6 +4479,7 @@ Alert manager is responsible for alerts ;)
 ## Git
 
 <a name="git-beginner"></a>
+
 #### :baby: Beginner
 
 <details>
@@ -4626,6 +4527,7 @@ Finally, you run `git rebase --continue`
 
 `git reset` depends on the usage, can modify the index or change the commit which the branch head
 is currently pointing at.
+
 </p>
 </b></details>
 
@@ -4664,12 +4566,12 @@ This page explains it the best: https://git-scm.com/docs/merge-strategies
 ```
 git checkout HEAD~1 -- /path/of/the/file
 ```
+
 </b></details>
 
 <details>
 <summary>What is the <code>.git</code> directory? What can you find there?</summary><br><b>
 	The <code>.git</code> folder contains all the information that is necessary for your project in version control and all the information about commits, remote repository address, etc. All of them are present in this folder. It also contains a log that stores your commit history so that you can roll back to history.
-
 
 This info copied from [https://stackoverflow.com/questions/29217859/what-is-the-git-folder](https://stackoverflow.com/questions/29217859/what-is-the-git-folder)
 </b></details>
@@ -4677,9 +4579,9 @@ This info copied from [https://stackoverflow.com/questions/29217859/what-is-the-
 <details>
 <summary>What are some Git anti-patterns? Things that you shouldn't do</summary><br><b>
 
-  * Not waiting too long between commits
-  * Not removing the .git directory :)
-</b></details>
+- Not waiting too long between commits
+- Not removing the .git directory :)
+  </b></details>
 
 <details>
 <summary>How do you remove a remote branch?</summary><br><b>
@@ -4717,6 +4619,7 @@ False. If you would like to keep a file on your filesystem, use `git reset <file
 </b></details>
 
 <a name="git-advanced"></a>
+
 #### :star: Advanced
 
 <details>
@@ -4724,8 +4627,8 @@ False. If you would like to keep a file on your filesystem, use `git reset <file
 
 Probably good to mention that it's:
 
-  * It's good for cases of merging more than one branch (and also the default of such use cases)
-  * It's primarily meant for bundling topic branches together 
+- It's good for cases of merging more than one branch (and also the default of such use cases)
+- It's primarily meant for bundling topic branches together
 
 This is a great article about Octopus merge: http://www.freblogg.com/2016/12/git-octopus-merge.html
 </b></details>
@@ -4733,18 +4636,19 @@ This is a great article about Octopus merge: http://www.freblogg.com/2016/12/git
 ## Go
 
 <a name="go-beginner"></a>
+
 #### :baby: Beginner
 
 <details>
 <summary>What are some characteristics of the Go programming language?</summary><br><b>
 
-  * Strong and static typing - the type of the variables can't be changed over time and they have to be defined at compile time
-  * Simplicity 
-  * Fast compile times
-  * Built-in concurrency
-  * Garbage collected
-  * Platform independent
-  * Compile to standalone binary - anything you need to run your app will be compiled into one binary. Very useful for version management in run-time. 
+- Strong and static typing - the type of the variables can't be changed over time and they have to be defined at compile time
+- Simplicity
+- Fast compile times
+- Built-in concurrency
+- Garbage collected
+- Platform independent
+- Compile to standalone binary - anything you need to run your app will be compiled into one binary. Very useful for version management in run-time.
 
 Go also has good community.
 </b></details>
@@ -4768,8 +4672,8 @@ False. We can't redeclare variables but yes, we must used declared variables.
 
 This should be answered based on your usage but some examples are:
 
-  * fmt - formatted I/O
-</b></details>
+- fmt - formatted I/O
+  </b></details>
 
 <details>
 <summary>What is the problem with the following block of code? How to fix it?
@@ -4781,6 +4685,7 @@ func main() {
     y = x
 }
 ```
+
 </summary><br><b>
 </b></details>
 
@@ -4799,6 +4704,7 @@ func main() {
     fmt.Println(y)
 }
 ```
+
 </summary><br><b>
 
 It looks what unicode value is set at 101 and uses it for converting the integer to a string.
@@ -4817,6 +4723,7 @@ func main() {
     const someConst = x + y
 }
 ```
+
 </summary><br><b>
 
 Constants in Go can only be declared using constant expressions.
@@ -4845,6 +4752,7 @@ func main() {
 	fmt.Printf("%v\n", z)
 }
 ```
+
 </summary><br><b>
 
 Go's iota identifier is used in const declarations to simplify definitions of incrementing numbers. Because it can be used in expressions, it provides a generality beyond that of simple enumerations.
@@ -4880,9 +4788,10 @@ func main() {
 	fmt.Printf("%v\n", x)
 }
 ```
+
 </summary><br><b>
 
-Since the first iota is declared with the value `3` (` + 3`), the next one has the value `4`
+Since the first iota is declared with the value `3` (`+ 3`), the next one has the value `4`
 </b></details>
 
 <details>
@@ -4890,16 +4799,16 @@ Since the first iota is declared with the value `3` (` + 3`), the next one has t
 
 ```
 package main
- 
+
 import (
 	"fmt"
 	"sync"
 	"time"
 )
- 
+
 func main() {
 	var wg sync.WaitGroup
-	
+
 	wg.Add(1)
 	go func() {
 		time.Sleep(time.Second * 2)
@@ -4915,6 +4824,7 @@ func main() {
 	fmt.Println("3")
 }
 ```
+
 </summary><br><b>
 
 Output: 2 1 3
@@ -4938,17 +4848,17 @@ func mod1(a []int) {
 	for i := range a {
 		a[i] = 5
 	}
-	
+
 	fmt.Println("1:", a)
 }
 
 func mod2(a []int) {
 	a = append(a, 125) // !
-	
+
 	for i := range a {
 		a[i] = 5
 	}
-	
+
 	fmt.Println("2:", a)
 }
 
@@ -4962,6 +4872,7 @@ func main() {
 	fmt.Println("2:", s2)
 }
 ```
+
 </summary><br><b>
 
 Output: <code><br>
@@ -4971,7 +4882,7 @@ Output: <code><br>
 2 [1 2 3 4]<br>
 </code>
 
-In `mod1` a is link, and when we're using `a[i]`, we're changing `s1` value to. 
+In `mod1` a is link, and when we're using `a[i]`, we're changing `s1` value to.
 But in `mod2`, `append` creats new slice, and we're changing only `a` value, not `s2`.
 
 [Aritcle about arrays](https://golangbot.com/arrays-and-slices/),
@@ -5014,25 +4925,29 @@ func main() {
 	h := &IntHeap{4, 8, 3, 6}
 	heap.Init(h)
 	heap.Push(h, 7)
-  
+
   fmt.Println((*h)[0])
 }
 ```
+
 </summary><br><b>
 
 Output: 3
 
 [Golang container/heap package](https://golang.org/pkg/container/heap/)
 </b></details>
+
 ## Mongo
 
 <a name="mongo-beginner"></a>
+
 #### :baby: Beginner
 
 <details>
 <summary>What are the advantages of MongoDB? Or in other words, why choosing MongoDB and not other implementation of NoSQL?</summary><br><b>
 
 MongoDB advantages are as followings:
+
 - Schemaless
 - Easy to scale-out
 - No complex joins
@@ -5044,7 +4959,7 @@ MongoDB advantages are as followings:
 <summary>What is the difference between SQL and NoSQL?</summary><br><b>
 
 The main difference is that SQL databases are structured (data is stored in the form of
-tables with rows and columns - like an excel spreadsheet table) while NoSQL is 
+tables with rows and columns - like an excel spreadsheet table) while NoSQL is
 unstructured, and the data storage can vary depending on how the NoSQL DB is set up, such
 as key-value pair, document-oriented, etc.
 </b></details>
@@ -5052,10 +4967,10 @@ as key-value pair, document-oriented, etc.
 <details>
 <summary>In what scenarios would you prefer to use NoSQL/Mongo over SQL?</summary><br><b>
 
-  * Heterogeneous data which changes often
-  * Data consistency and integrity is not top priority
-  * Best if the database needs to scale rapidly
-</b></details>
+- Heterogeneous data which changes often
+- Data consistency and integrity is not top priority
+- Best if the database needs to scale rapidly
+  </b></details>
 
 <details>
 <summary>What is a document? What is a collection?</summary><br><b>
@@ -5086,6 +5001,7 @@ as key-value pair, document-oriented, etc.
 ## OpenShift
 
 <a name="openshift-beginner"></a>
+
 #### :baby: Beginner
 
 <details>
@@ -5119,6 +5035,7 @@ as key-value pair, document-oriented, etc.
 ## Shell Scripting
 
 <a name="shell-scripting-beginner"></a>
+
 #### :baby: Beginner
 
 <details>
@@ -5129,12 +5046,9 @@ as key-value pair, document-oriented, etc.
 <details>
 <summary>What this line in scripts mean?: <code>#!/bin/bash</code></summary><br><b>
 
-
-`#!/bin/bash` is She-bang 
+`#!/bin/bash` is She-bang
 
 /bin/bash is the most common shell used as default shell for user login of the linux system. The shell’s name is an acronym for Bourne-again shell. Bash can execute the vast majority of scripts and thus is widely used because it has more features, is well developed and better syntax.
-
-
 
 </b></details>
 
@@ -5143,8 +5057,8 @@ as key-value pair, document-oriented, etc.
 
 Few example:
 
-  * Comments on how to run it and/or what it does
-  * Adding "set -e" since I want the script to exit if a certain command failed 
+- Comments on how to run it and/or what it does
+- Adding "set -e" since I want the script to exit if a certain command failed
 
 You can have an entirely different answer. It's based only on your experience.
 </b></details>
@@ -5160,28 +5074,28 @@ Most of the time we would actually want the opposite to happen. In order to make
 <details>
 <summary>Today we have tools and technologies like Ansible. Why would someone still use shell scripting?</summary><br><b>
 
-  * Speed
-  * The module we need doesn't exist
-  * We are delivering the scripts to customers who don't have access to the public network and don't necessarily have Ansible installed on their systems.
-</b></details>
+- Speed
+- The module we need doesn't exist
+- We are delivering the scripts to customers who don't have access to the public network and don't necessarily have Ansible installed on their systems.
+  </b></details>
 
 <details>
 <summary>Explain what would be the result of each command:
 
-  * <code>echo $0</code>
-  * <code>echo $?</code>
-  * <code>echo $$</code>
-  * <code>echo $@</code>
-  * <code>echo $#</code></summary><br><b>
-</b></details>
+- <code>echo \$0</code>
+- <code>echo \$?</code>
+- <code>echo \$\$</code>
+- <code>echo \$@</code>
+- <code>echo \$#</code></summary><br><b>
+  </b></details>
 
 <details>
 <summary>How do you debug shell scripts?</summary><br><b>
 
 Answer depends on the language you are using for writing your scripts. If Bash is used for example then:
 
-  * Adding -x to the script I'm running in Bash
-  * Old good way of adding echo statements
+- Adding -x to the script I'm running in Bash
+- Old good way of adding echo statements
 
 If Python, then using pdb is very useful.
 </b></details>
@@ -5226,6 +5140,7 @@ Using the keyword <code>read</code> so for example <code>read x</code> will wait
 <summary>Write a script to determine whether a host is up or down</summary><br><b>
 
 **EXAMPLE ONE**
+
 ```
 #!/bin/bash
 SERVERIP=<IP Address>
@@ -5235,7 +5150,7 @@ ping -c 3 $SERVERIP > /dev/null 2>&1
 if [ $? -ne 0 ]
 then
    # Use mailer here:
-   mailx -s "Server $SERVERIP is down" -t "$NOTIFYEMAIL" < /dev/null 
+   mailx -s "Server $SERVERIP is down" -t "$NOTIFYEMAIL" < /dev/null
 fi
 ```
 
@@ -5245,6 +5160,7 @@ fi
 <summary>Write a script to remove all the empty files in a given directory (also nested directories)</summary><br><b>
 
 **EXAMPLE ONE**
+
 ```
 #! /bin/bash
 for x in *
@@ -5261,6 +5177,7 @@ done
 </b></details>
 
 <a name="shell-scripting-advanced"></a>
+
 #### Advanced
 
 <details>
@@ -5293,10 +5210,10 @@ It is called 'process substitution'. It provides a way to pass the output of a c
 https://superuser.com/a/1060002/167769
 </details>
 
-
 ## SQL
 
 <a name="sql-beginner"></a>
+
 #### :baby: Beginner
 
 <details>
@@ -5310,7 +5227,7 @@ Structured Query Language
 <summary>How is SQL Different from NoSQL</summary><br><b>
 
 The main difference is that SQL databases are structured (data is stored in the form of
-tables with rows and columns - like an excel spreadsheet table) while NoSQL is 
+tables with rows and columns - like an excel spreadsheet table) while NoSQL is
 unstructured, and the data storage can vary depending on how the NoSQL DB is set up, such
 as key-value pair, document-oriented, etc.
 </b></details>
@@ -5320,11 +5237,11 @@ as key-value pair, document-oriented, etc.
 
 ACID stands for Atomicity, Consistency, Isolation, Durability. In order to be ACID compliant, the database much meet each of the four criteria
 
-**Atomicity** - When a change occurs to the database, it should either succeed or fail as a whole. 
+**Atomicity** - When a change occurs to the database, it should either succeed or fail as a whole.
 
-For example, if you were to update a table, the update should completely execute. If it only partially executes, the 
+For example, if you were to update a table, the update should completely execute. If it only partially executes, the
 update is considered failed as a whole, and will not go through - the DB will revert back to it's original
-state before the update occurred. It should also be mentioned that Atomicity ensures that each 
+state before the update occurred. It should also be mentioned that Atomicity ensures that each
 transaction is completed as it's own stand alone "unit" - if any part fails, the whole statement fails.
 
 **Consistency** - any change made to the database should bring it from one valid state into the next.
@@ -5342,11 +5259,12 @@ time you executed your query, 15 of the 20 changes had gone through, but 5 were 
 only see the 15 changes that had completed - you wouldn't see the database mid-update as the change goes through.
 
 **Durability** - Once a change is committed, it will remain committed regardless of what happens
-(power failure, system crash, etc.). This means that all completed transactions 
-must be recorded in non-volatile memory. 
+(power failure, system crash, etc.). This means that all completed transactions
+must be recorded in non-volatile memory.
 
-Note that SQL is by nature ACID compliant. Certain NoSQL DB's can be ACID compliant depending on 
+Note that SQL is by nature ACID compliant. Certain NoSQL DB's can be ACID compliant depending on
 how they operate, but as a general rule of thumb, NoSQL DB's are not considered ACID compliant
+
 </details>
 
 <details>
@@ -5355,8 +5273,8 @@ how they operate, but as a general rule of thumb, NoSQL DB's are not considered 
 SQL - Best used when data integrity is crucial. SQL is typically implemented with many
 businesses and areas within the finance field due to it's ACID compliance.
 
-NoSQL - Great if you need to scale things quickly. NoSQL was designed with web applications 
-in mind, so it works great if you need to quickly spread the same information around to 
+NoSQL - Great if you need to scale things quickly. NoSQL was designed with web applications
+in mind, so it works great if you need to quickly spread the same information around to
 multiple servers
 
 Additionally, since NoSQL does not adhere to the strict table with columns and rows structure
@@ -5367,14 +5285,15 @@ that Relational Databases require, you can store different data types together.
 <summary>What is a Cartesian Product?</summary><br>
 
 A Cartesian product is when all rows from the first table are joined to all rows in the second
-table. This can be done implicitly by not defining a key to join, or explicitly by 
+table. This can be done implicitly by not defining a key to join, or explicitly by
 calling a CROSS JOIN on two tables, such as below:
 
-Select * from customers **CROSS JOIN** orders;
+Select \* from customers **CROSS JOIN** orders;
 
 Note that a Cartesian product can also be a bad thing - when performing a join
 on two tables in which both do not have unique keys, this could cause the returned information
-to be incorrect. 
+to be incorrect.
+
 </details>
 
 ##### SQL Specific Questions
@@ -5383,29 +5302,29 @@ For these questions, we will be using the Customers and Orders tables shown belo
 
 **Customers**
 
-Customer_ID | Customer_Name | Items_in_cart | Cash_spent_to_Date
------------- | ------------- | ------------- | -------------
-100204 | John Smith | 0 | 20.00
-100205 | Jane Smith | 3 | 40.00
-100206 | Bobby Frank | 1 | 100.20
+| Customer_ID | Customer_Name | Items_in_cart | Cash_spent_to_Date |
+| ----------- | ------------- | ------------- | ------------------ |
+| 100204      | John Smith    | 0             | 20.00              |
+| 100205      | Jane Smith    | 3             | 40.00              |
+| 100206      | Bobby Frank   | 1             | 100.20             |
 
 **ORDERS**
 
-Customer_ID | Order_ID | Item | Price | Date_sold
------------- | ------------- | ------------- | ------------- | -------------
-100206 | A123 | Rubber Ducky | 2.20 | 2019-09-18
-100206 | A123 | Bubble Bath | 8.00 | 2019-09-18
-100206 | Q987 | 80-Pack TP | 90.00 | 2019-09-20
-100205 | Z001 | Cat Food - Tuna Fish | 10.00 | 2019-08-05
-100205 | Z001 | Cat Food - Chicken | 10.00 | 2019-08-05
-100205 | Z001 | Cat Food - Beef | 10.00 | 2019-08-05
-100205 | Z001 | Cat Food - Kitty quesadilla | 10.00 | 2019-08-05
-100204 | X202 | Coffee | 20.00 | 2019-04-29
+| Customer_ID | Order_ID | Item                        | Price | Date_sold  |
+| ----------- | -------- | --------------------------- | ----- | ---------- |
+| 100206      | A123     | Rubber Ducky                | 2.20  | 2019-09-18 |
+| 100206      | A123     | Bubble Bath                 | 8.00  | 2019-09-18 |
+| 100206      | Q987     | 80-Pack TP                  | 90.00 | 2019-09-20 |
+| 100205      | Z001     | Cat Food - Tuna Fish        | 10.00 | 2019-08-05 |
+| 100205      | Z001     | Cat Food - Chicken          | 10.00 | 2019-08-05 |
+| 100205      | Z001     | Cat Food - Beef             | 10.00 | 2019-08-05 |
+| 100205      | Z001     | Cat Food - Kitty quesadilla | 10.00 | 2019-08-05 |
+| 100204      | X202     | Coffee                      | 20.00 | 2019-04-29 |
 
 <details>
 <summary>How would I select all fields from this table?</summary><br><b>
 
-Select * <br>
+Select \* <br>
 From Customers;
 </b></details>
 
@@ -5445,11 +5364,12 @@ both the Customers table and Orders table
 Select c.Customer_Name, o.Item <br>
 From Customers c <br>
 Left Join Orders o <br>
-  On c.Customer_ID = o.Customer_ID;
+On c.Customer_ID = o.Customer_ID;
 
 </b></details>
 
 <a name="sql-advanced"></a>
+
 #### Advanced
 
 <details>
@@ -5464,11 +5384,11 @@ Group by Customer_ID <br>
 Select Customer_name, TOTAL_PRICE <br>
 From Customers c <br>
 Inner JOIN cat_food f <br>
-  ON c.Customer_ID = f.Customer_ID <br>
+ON c.Customer_ID = f.Customer_ID <br>
 where c.Customer_ID in (Select Customer_ID from cat_food);
 
-Although this was a simple statement, the "with" clause really shines when 
-a complex query needs to be run on a table before joining to another. With statements are nice, 
+Although this was a simple statement, the "with" clause really shines when
+a complex query needs to be run on a table before joining to another. With statements are nice,
 because you create a pseudo temp when running your query, instead of creating a whole new table.
 
 The Sum of all the purchases of cat food weren't readily available, so we used a with statement to create
@@ -5478,6 +5398,7 @@ the pseudo table to retrieve the sum of the prices spent by each customer, then 
 ## Azure
 
 <a name="azure-beginner"></a>
+
 #### :baby: Beginner
 
 <details>
@@ -5488,7 +5409,6 @@ the pseudo table to retrieve the sum of the prices spent by each customer, then 
 <summary>Explain availability sets and availability zones</summary><br><b>
 
 An availability set is a logical grouping of VMs that allows Azure to understand how your application is built to provide redundancy and availability. It is recommended that two or more VMs are created within an availability set to provide for a highly available application and to meet the 99.95% Azure SLA.
-
 
 </b></details>
 
@@ -5528,11 +5448,11 @@ An availability set is a logical grouping of VMs that allows Azure to understand
 It's a monitoring service that provides threat protection across all of the services in Azure.
 More specifically, it:
 
-* Provides security recommendations based on your usage
-* Monitors security settings and continuously all the services
-* Analyzes and identifies potential inbound attacks
-* Detects and blocks malware using machine learning
-</b></details>
+- Provides security recommendations based on your usage
+- Monitors security settings and continuously all the services
+- Analyzes and identifies potential inbound attacks
+- Detects and blocks malware using machine learning
+  </b></details>
 
 <details>
 <summary>What is Azure Active Directory?</summary><br><b>
@@ -5548,10 +5468,10 @@ Azure AD is a cloud-based identity service. You can use it as a standalone servi
 <summary>What components are part of Azure ATP?</summary><br><b>
 </b></details>
 
-
 ## GCP
 
 <a name="gcp-beginner"></a>
+
 #### :baby: Beginner
 
 <details>
@@ -5573,6 +5493,7 @@ Azure AD is a cloud-based identity service. You can use it as a standalone servi
 ## OpenStack
 
 <a name="openstack-beginner"></a>
+
 #### :baby: Beginner
 
 <details>
@@ -5586,12 +5507,12 @@ Azure AD is a cloud-based identity service. You can use it as a standalone servi
 <details>
 <summary>Can you tell me what each of the following components/projects is responsible for?:
 
-  * Nova
-  * Neutron
-  * Cinder
-  * Glance
-  * Keystone</summary><br><b>
-</b></details>
+- Nova
+- Neutron
+- Cinder
+- Glance
+- Keystone</summary><br><b>
+  </b></details>
 
 <details>
 <summary>Describe in detail how you bring up an instance with an IP you can reach from outside the cloud</summary><br><b>
@@ -5652,6 +5573,7 @@ Azure AD is a cloud-based identity service. You can use it as a standalone servi
 </b></details>
 
 <a name="openstack-advanced"></a>
+
 #### :baby: Advanced
 
 ##### Networking
@@ -5664,10 +5586,10 @@ Azure AD is a cloud-based identity service. You can use it as a standalone servi
 <summary>What is the role of network namespaces in OpenStack?</summary>
 </b></details>
 
-
 ## Security
 
 <a name="security-beginner"></a>
+
 #### :baby: Beginner
 
 <details>
@@ -5698,7 +5620,6 @@ Authorization is the process of identifying what level of access the service or 
 
 SSO (Single Sign-on), is a method of access control that enables a user to log in once and gain access to the resources of multiple software systems without being prompted to log in again.
 
-
 </b></details>
 
 <details>
@@ -5706,7 +5627,7 @@ SSO (Single Sign-on), is a method of access control that enables a user to log i
 
 Multi-Factor Authentication (Also known as 2FA). Allows the user to present two pieces of evidence, credentials, when logging into an account.
 
-- The credentials fall into any of these three categories: something you know (like a password or PIN), something you have (like a smart card), or something you are (like your fingerprint).  Credentials must come from two different categories to enhance security.
+- The credentials fall into any of these three categories: something you know (like a password or PIN), something you have (like a smart card), or something you are (like your fingerprint). Credentials must come from two different categories to enhance security.
 
 </b></details>
 
@@ -5722,7 +5643,7 @@ Access control based on user roles (i.e., a collection of access authorizations 
 <details>
 <summary>Explain Symmetric encryption</summary><br><b>
 
-A symmetric encryption is any technique where the same key is used to both encrypt and decrypt the data. 
+A symmetric encryption is any technique where the same key is used to both encrypt and decrypt the data.
 
 </b></details>
 
@@ -5733,29 +5654,27 @@ A asymmetric encryption is any technique where the there is two different keys t
 
 </b></details>
 
-
 <details>
 <summary>Explain the following:
 
-  * Vulnerability
-  * Exploits
-  * Risk
-  * Threat</summary><br><b>
-</b></details>
+- Vulnerability
+- Exploits
+- Risk
+- Threat</summary><br><b>
+  </b></details>
 
 <details>
 <summary>What is XSS?</summary><br><b>
 
-Cross Site Scripting (XSS) is an type of a attack when the attacker inserts browser executable code within a HTTP response. Now the injected attack is not stored in the web application, it will only affact the users who open the maliciously crafted link or third-party web page. A successful attack allows the attacker to access any cookies, session tokens, or other sensitive information retained by the browser and used with that site 
+Cross Site Scripting (XSS) is an type of a attack when the attacker inserts browser executable code within a HTTP response. Now the injected attack is not stored in the web application, it will only affact the users who open the maliciously crafted link or third-party web page. A successful attack allows the attacker to access any cookies, session tokens, or other sensitive information retained by the browser and used with that site
 
 You can test by detecting user-defined variables and how to input them. This includes hidden or non-obvious inputs such as HTTP parameters, POST data, hidden form field values, and predefined radio or selection values. You then analyze each found vector to see if their are potential vulnerabilities, then when found you craft input data with each input vector. Then you test the crafted input and see if it works.
-	
 </b></details>
 
 <details>
 <summary>What is an SQL injection? How to manage it?</summary><br><b>
 
-SQL injection is an attack consists of inserts either a partial or full SQL query through data input from the browser to the web application. When a successful SQL injection happens it will allow the attacker to read sensitive information stored on the database for the web application. 
+SQL injection is an attack consists of inserts either a partial or full SQL query through data input from the browser to the web application. When a successful SQL injection happens it will allow the attacker to read sensitive information stored on the database for the web application.
 
 You can test by using a stored procedure, so the application must be sanitize the user input to get rid of the tisk of code injection. If not then the user could enter bad SQL, that will then be executed within the procedure
 
@@ -5815,7 +5734,8 @@ You can test by using a stored procedure, so the application must be sanitize th
 DNS spoofing occurs when a particular DNS server’s records of “spoofed” or altered maliciously to redirect traffic to the attacker. This redirection of traffic allows the attacker to spread malware, steal data, etc.
 
 **Prevention**
-- Use encrypted data transfer protocols - Using end-to-end encryption vian SSL/TLS will help decrease the chance that a website / its visitors are compromised by DNS spoofing. 
+
+- Use encrypted data transfer protocols - Using end-to-end encryption vian SSL/TLS will help decrease the chance that a website / its visitors are compromised by DNS spoofing.
 - Use DNSSEC - DNSSEC, or Domain Name System Security Extensions, uses digitally signed DNS records to help determine data authenticity.
 - Implement DNS spoofing detection mechanisms - it’s important to implement DNS spoofing detection software. Products such as XArp help product against ARP cache poisoning by inspecting the data that comes through before transmitting it.
 
@@ -5825,7 +5745,6 @@ DNS spoofing occurs when a particular DNS server’s records of “spoofed” or
 <summary>What can you tell me about Stuxnet?</summary><br><b>
 
 Stuxnet is a computer worm that was originally aimed at Iran’s nuclear facilities and has since mutated and spread to other industrial and energy-producing facilities. The original Stuxnet malware attack targeted the programmable logic controllers (PLCs) used to automate machine processes. It generated a flurry of media attention after it was discovered in 2010 because it was the first known virus to be capable of crippling hardware and because it appeared to have been created by the U.S. National Security Agency, the CIA, and Israeli intelligence.
-
 
 </b></details>
 
@@ -5844,7 +5763,6 @@ Spectre is an attack method which allows a hacker to “read over the shoulder�
 <summary>Explain "Format String Vulnerability"</summary><br><b>
 </b></details>
 
-
 <details>
 <summary>Explain DMZ</summary><br><b>
 </b></details>
@@ -5856,10 +5774,9 @@ Spectre is an attack method which allows a hacker to “read over the shoulder�
 <details>
 <summary>What is CSRF? How to handle CSRF?</summary><br><b>
 
-Cross-Site Request Forgery (CSRF) is an attack that makes the end user to initate a unwanted action on the web application in which the user has a authenticated session, the attacker may user an email and force the end user to click on the link and that then execute malicious actions. When an CSRF attack is successful it will compromise the end user data 
+Cross-Site Request Forgery (CSRF) is an attack that makes the end user to initate a unwanted action on the web application in which the user has a authenticated session, the attacker may user an email and force the end user to click on the link and that then execute malicious actions. When an CSRF attack is successful it will compromise the end user data
 
 You can use OWASP ZAP to analyze a "request", and if it appears that there no protection against cross-site request forgery when the Security Level is set to 0 (the value of csrf-token is SecurityIsDisabled.) One can use data from this request to prepare a CSRF attack by using OWASP ZAP
-	
 </b></details>
 
 <details>
@@ -5906,6 +5823,7 @@ A buffer overflow (or buffer overrun) occurs when the volume of data exceeds the
 </b></details>
 
 <a name="security-advanced"></a>
+
 #### :baby: Advanced
 
 <details>
@@ -5926,13 +5844,14 @@ MAC address flooding attack (CAM table flooding attack) is a type of network att
 <details>
 <summary>What is Cache Poisoned Denial of Service?</summary><br><b>
 
-CPDoS or Cache Poisoned Denial of Service. It poisons the CDN cache. By manipulating certain header requests, the attacker forces the origin server to return a Bad Request error which is stored in the CDN’s cache. Thus, every request that comes after the attack will get an error page. 
+CPDoS or Cache Poisoned Denial of Service. It poisons the CDN cache. By manipulating certain header requests, the attacker forces the origin server to return a Bad Request error which is stored in the CDN’s cache. Thus, every request that comes after the attack will get an error page.
 
 </b></details>
 
 ## Puppet
 
 <a name="puppet-beginner"></a>
+
 #### :baby: Beginner
 
 <details>
@@ -5950,10 +5869,10 @@ CPDoS or Cache Poisoned Denial of Service. It poisons the CDN cache. By manipula
 <details>
 <summary>Explain the following:
 
-  * Module
-  * Manifest
-  * Node</summary><br><b>
-</b></details>
+- Module
+- Manifest
+- Node</summary><br><b>
+  </b></details>
 
 <details>
 <summary>Explain Facter</summary><br><b>
@@ -5964,6 +5883,7 @@ CPDoS or Cache Poisoned Denial of Service. It poisons the CDN cache. By manipula
 </b></details>
 
 <a name="puppet-advanced"></a>
+
 #### :baby: Advanced
 
 <details>
@@ -5977,6 +5897,7 @@ CPDoS or Cache Poisoned Denial of Service. It poisons the CDN cache. By manipula
 ## Elastic
 
 <a name="elastic-beginner"></a>
+
 #### :baby: Beginner
 
 <details>
@@ -5984,27 +5905,27 @@ CPDoS or Cache Poisoned Denial of Service. It poisons the CDN cache. By manipula
 
 The Elastic Stack consists of:
 
-  * Elasticsearch
-  * Kibana
-  * Logstash
-  * Beats
-  * Elastic Hadoop
-  * APM Server
+- Elasticsearch
+- Kibana
+- Logstash
+- Beats
+- Elastic Hadoop
+- APM Server
 
 The most used projects are the Elasticserach, Logstash and Kibana. Also known as the ELK stack.
 </b></details>
 
 <details>
-<summary>Describe what happens from the moment the app logged some information until it's displayed to the user in a dashboard when the Elastic stack is used</summary><br><b>  
+<summary>Describe what happens from the moment the app logged some information until it's displayed to the user in a dashboard when the Elastic stack is used</summary><br><b>
 
 The process may vary based on the chosen architecture:
 
 1. The data logged by the application is picked by filebeat and sent to logstash
 2. Logstash process the log based on the defined filters. Once done, the output is sent to Elasticsearch
-2. Elasticsearch stores the document it got and the document is indexed for quick future access
+3. Elasticsearch stores the document it got and the document is indexed for quick future access
 4. The user creates visualizations in Kibana which based on the indexed data
 5. The user creates a dashboard which composed out of the visualization created in the previous step
-</b></details>
+   </b></details>
 
 ##### Elasticsearch
 
@@ -6054,10 +5975,10 @@ From the official docs:
 <details>
 <summary>What reserved fields a document has?</summary><br><b>
 
-  * _index
-  * _id
-  * _type
-</b></details>
+- \_index
+- \_id
+- \_type
+  </b></details>
 
 <details>
 <summary>Explain Mapping</summary><br><b>
@@ -6066,10 +5987,10 @@ From the official docs:
 <details>
 <summary>What are the advantages of defining your own mapping? (or: when would you use your own mapping?)</summary><br><b>
 
-* You can optimize fields for partial matching
-* You can define custom formats of known fields (e.g. date)
-* You can perform language-specific analysis
-</b></details>
+- You can optimize fields for partial matching
+- You can define custom formats of known fields (e.g. date)
+- You can perform language-specific analysis
+  </b></details>
 
 <details>
 <summary>Explain Shards</summary><br><b>
@@ -6113,7 +6034,7 @@ More about the phases [here](https://www.elastic.co/guide/en/elasticsearch/refer
 
 From the official docs:
 
-"In the query context, a query clause answers the question “How well does this document match this query clause?” Besides deciding whether or not the document matches, the query clause also calculates a relevance score in the _score meta-field."
+"In the query context, a query clause answers the question “How well does this document match this query clause?” Besides deciding whether or not the document matches, the query clause also calculates a relevance score in the \_score meta-field."
 
 "In a filter context, a query clause answers the question “Does this document match this query clause?” The answer is a simple Yes or No — no scores are calculated. Filter context is mostly used for filtering structured data"
 </b></details>
@@ -6123,10 +6044,10 @@ From the official docs:
 <details>
 <summary>What are Logstash plugins? What plugins types are there?</summary><br><b>
 
-  * Input Plugins - how to collect data from different sources
-  * Filter Plugins - processing data
-  * Output Plugins - push data to different outputs/services/platforms
-</b></details>
+- Input Plugins - how to collect data from different sources
+- Filter Plugins - processing data
+- Output Plugins - push data to different outputs/services/platforms
+  </b></details>
 
 <details>
 <summary>What is grok?</summary><br><b>
@@ -6197,6 +6118,7 @@ Total number of documents matching the search results. If not query used then si
 </b></details>
 
 <a name="elastic-advanced"></a>
+
 #### :star: Advnaced
 
 <details>
@@ -6211,6 +6133,7 @@ A production environment with large amounts of data can include some kind of buf
 ## DNS
 
 <a name="dns-beginner"></a>
+
 #### :baby: Beginner
 
 <details>
@@ -6225,29 +6148,28 @@ As you know computer networking is done with IP addresses (layer 3 of the OSI mo
 
 In general the process is as follows:
 
-  * The user types an address in the web browser (some_site.com)
-  * The operating system gets a request from the browser to translate the address the user entered
-  * A query created to check a local entry of the address exists in the system. In case it doesn't, the request is forwarded to the DNS resolver
-  * The Resolver is a server, usually configured by your ISP when you connect to the internet, that responsible for resolving your query by contacting other DNS servers
-  * The Resolver contacts the root nameserver (aka as .)
-  * The root nameserver responds with the address of the relevant Top Level Domain DNS server (if your address ends with org then the org TLD)
-  * The Resolver then contacts the TLD DNS and TLD DNS responds with the IP address that matches the address the user typed in the browser
-  * The Resolver passes this information to the browser
-  * The user is happy :D
-</b></details>
+- The user types an address in the web browser (some_site.com)
+- The operating system gets a request from the browser to translate the address the user entered
+- A query created to check a local entry of the address exists in the system. In case it doesn't, the request is forwarded to the DNS resolver
+- The Resolver is a server, usually configured by your ISP when you connect to the internet, that responsible for resolving your query by contacting other DNS servers
+- The Resolver contacts the root nameserver (aka as .)
+- The root nameserver responds with the address of the relevant Top Level Domain DNS server (if your address ends with org then the org TLD)
+- The Resolver then contacts the TLD DNS and TLD DNS responds with the IP address that matches the address the user typed in the browser
+- The Resolver passes this information to the browser
+- The user is happy :D
+  </b></details>
 
 <details>
 <summary>What types of DNS records are there?</summary><br><b>
 
-  * A
-  * PTR
-  * MX
-  * AAAA
-</b></details>
+- A
+- PTR
+- MX
+- AAAA
+  </b></details>
 
 <details>
 <summary>What is a A record?</summary><br><b>
-
 
 A (Address) Maps a host name to an IP address. When a computer has multiple adapter cards and IP addresses, it should have multiple address records.
 
@@ -6300,21 +6222,21 @@ Another definition: "Systems that are physically separated, but logically connec
 <details>
 <summary>What can cause a system to fail?</summary><br><b>
 
-* Network
-* CPU
-* Memory
-* Disk
-</b></details>
+- Network
+- CPU
+- Memory
+- Disk
+  </b></details>
 
 <details>
 <summary>Do you know what is "CAP theorem"? (aka as Brewer's theorem)</summary><br><b>
 
 According to the CAP theorem, it's not possible for a distributed data store to provide more than two of the following at the same time:
 
-* Availability: Every request receives a response (it doesn't has to be the most recent data)
-* Consistency: Every request receives a response with the latest/most recent data
-* Partition tolerance: Even if some the data is lost/dropped, the system keeps running 
-</b></details>
+- Availability: Every request receives a response (it doesn't has to be the most recent data)
+- Consistency: Every request receives a response with the latest/most recent data
+- Partition tolerance: Even if some the data is lost/dropped, the system keeps running
+  </b></details>
 
 <details>
 <summary>What are the problems with the following design? How to improve it?<br>
@@ -6332,10 +6254,11 @@ Issues:
 If load balancer dies , we lose the ability to communicate with the application.
 
 Ways to improve:
-* Add another load balancer
-* Use DNS A record for both load balancers
-* Use message queue
-</b></details>
+
+- Add another load balancer
+- Use DNS A record for both load balancers
+- Use message queue
+  </b></details>
 
 <details>
 <summary>What is "Shared-Nothing" architecture?</summary><br><b>
@@ -6384,18 +6307,18 @@ Throughput. To have a good throughput, the upload stream should be routed to an 
 <details>
 <summary>What other considerations (except latency and throughput) are there when forwarding requests?</summary><br><b>
 
-* Keep caches updated (which means the request could be forwarded not to the closest datacenter)
-</b></details>
+- Keep caches updated (which means the request could be forwarded not to the closest datacenter)
+  </b></details>
 
 #### Jira
 
 <details>
 <summary>Explain/Demonstrate the following types in Jira:
 
-  * Epic
-  * Story
-  * Task</summary><br><b>
-</b></details>
+- Epic
+- Story
+- Task</summary><br><b>
+  </b></details>
 
 <details>
 <summary>What is a project in Jira?</summary><br><b>
@@ -6410,13 +6333,13 @@ Throughput. To have a good throughput, the upload stream should be routed to an 
 <details>
 <summary>Describe HTTP request lifecycle</summary><br><b>
 
-* Resolve host by request to DNS resolver
-* Client SYN
-* Server SYN+ACK
-* Client SYN
-* HTTP request
-* HTTP response
-</b></details>
+- Resolve host by request to DNS resolver
+- Client SYN
+- Server SYN+ACK
+- Client SYN
+- HTTP request
+- HTTP response
+  </b></details>
 
 <details>
 <summary>True or False? HTTP is stateful</summary><br><b>
@@ -6429,33 +6352,33 @@ False. Server doesn't maintain state for incoming request.
 
 It consits of:
 
- * Request line - request type
- * Headers - content info like length, enconding, etc.
- * Body (not always included)
-</b></details>
+- Request line - request type
+- Headers - content info like length, enconding, etc.
+- Body (not always included)
+  </b></details>
 
 <details>
 <summary>What HTTP method types are there?</summary><br><b>
 
-* GET
-* POST
-* HEAD
-* PUT
-* DELETE
-* CONNECT
-* OPTIONS
-* TRACE
-</b></details>
+- GET
+- POST
+- HEAD
+- PUT
+- DELETE
+- CONNECT
+- OPTIONS
+- TRACE
+  </b></details>
 
 <details>
 <summary>What HTTP response codes are there?</summary><br><b>
 
-* 1xx - informational
-* 2xx - Success
-* 3xx - Redirect
-* 4xx - Error, client fault
-* 5xx - Error, server fault
-</b></details>
+- 1xx - informational
+- 2xx - Success
+- 3xx - Redirect
+- 4xx - Error, client fault
+- 5xx - Error, server fault
+  </b></details>
 
 <details>
 <summary>What is HTTPS?</summary><br><b>
@@ -6585,11 +6508,11 @@ Relax, there is no wrong or right answer here...I think.
 
 Some ideas (some of them bad and should not be used):
 
-* Senior DevOps
-* Manager
-* Retirement
-* Your manager
-</b></details>
+- Senior DevOps
+- Manager
+- Retirement
+- Your manager
+  </b></details>
 
 <details>
 <summary>Give an example of a time you were able to change the view of a team about a particular tool/project/technology</summary><br><b>
@@ -6623,11 +6546,11 @@ Better answer: Every person has strengths and weaknesses. This is true also for 
 
 You know the best, but some ideas if you find it hard to express yourself:
 
-* Diversity
-* Complexity
-* Challenging
-* Communication with several different teams
-</b></details>
+- Diversity
+- Complexity
+- Challenging
+- Communication with several different teams
+  </b></details>
 
 <details>
 <summary>What are your responsibilities in your current position?</summary><br><b>
@@ -6640,11 +6563,11 @@ You know the best :)
 
 You can use and elaborate on one or all of the following:
 
-* Passion
-* Motivation 
-* Autodidact
-* Creativity (be able to support it with some actual examples)
-</b></details>
+- Passion
+- Motivation
+- Autodidact
+- Creativity (be able to support it with some actual examples)
+  </b></details>
 
 #### Team Lead
 
@@ -6670,11 +6593,11 @@ These are only a suggestion, use them carefully. Not every interviewer will be a
 <details>
 <summary>What is the current level of technical debt you are dealing with?</summary><br><b>
 
-Be careful when asking this question - all companies, regardless of size, have some level of tech debt. 
+Be careful when asking this question - all companies, regardless of size, have some level of tech debt.
 Phrase the question in the light that all companies have the deal with this, but you want to see the current
 pain points they are dealing with <br>
 
-This is a great way to figure how managers deal with unplanned work, and how good they are at 
+This is a great way to figure how managers deal with unplanned work, and how good they are at
 setting expectations with projects.
 </b></details>
 
@@ -6685,7 +6608,7 @@ setting expectations with projects.
 <details>
 <summary>What was your favorite project you've worked on?</summary><br><b>
 
-This can give you insights in some of the cool projects a company is working on, and if 
+This can give you insights in some of the cool projects a company is working on, and if
 you would enjoy working on projects like these. This is also a good way to see if
 the managers are allowing employees to learn and grow with projects outside of the
 normal work you'd do.
@@ -6736,13 +6659,13 @@ Not only this will tell you what is expected from you, it will also provide big 
 <details>
 <summary>Explain the following types of tests:
 
-  * Load Testing
-  * Stress Testing
-  * Capacity Testing
-  * Volume Testing
-  * Endurance Testing
-</summary><br><b>
-</b></details>
+- Load Testing
+- Stress Testing
+- Capacity Testing
+- Volume Testing
+- Endurance Testing
+  </summary><br><b>
+  </b></details>
 
 ## Databases
 
@@ -6765,10 +6688,10 @@ A connection leak is a situation where database connection isn't closed after be
 <details>
 <summary>Your database performs slowly than usual. More specifically, your queries are taking a lot of time. What would you do?</summary><br><b>
 
-* Query for running queries and cancel the irrelevant queries
-* Check for connection leaks (query for running connections and include their IP)
-* Check for table locks and kill irrelevant locking sessions
-</b></details>
+- Query for running queries and cancel the irrelevant queries
+- Check for connection leaks (query for running connections and include their IP)
+- Check for table locks and kill irrelevant locking sessions
+  </b></details>
 
 <details>
 <summary>What is a connection leak?</summary><br><b>
@@ -6843,10 +6766,10 @@ Bonus: extract the last word of each line
 <details>
 <summary>What are the drawbacks of monolithic architecture?</summary><br><b>
 
-* Not suitable for frequent code changes and the ability to deploy new features
-* Not designed for today's infrastructure (like public clouds)
-* Scaling a team to work monolithic architecture is more challenging
-</b></details>
+- Not suitable for frequent code changes and the ability to deploy new features
+- Not designed for today's infrastructure (like public clouds)
+- Scaling a team to work monolithic architecture is more challenging
+  </b></details>
 
 <details>
 <summary>What are the advantages of micro-services architecture over a monolithic architecture?</summary><br><b>
@@ -6901,8 +6824,8 @@ Instead of working in "push mode", the consumers can pull tasks only when they a
 You can mention:
 
 roll-back & roll-forward
-cut over 
-dress rehearsals 
+cut over
+dress rehearsals
 DNS redirection
 </b></details>
 
@@ -6914,24 +6837,23 @@ DNS redirection
 
 Exercises are all about:
 
-  * Setting up environments
-  * Writing scripts
-  * Designing and/or developing infrastructure apps
-  * Fixing existing applications
+- Setting up environments
+- Writing scripts
+- Designing and/or developing infrastructure apps
+- Fixing existing applications
 
 Below you can find several exercises
 
-* [Writing a Dockerfile and running a container](exercises/write_dockerfile_run_container.md)
-* [Elasticsearch & Kibana on AWS](exercises/elk_kibana_aws.md)
-* [ELK & Filebeat](exercises/eflk.md)
-* [Ansible, Minikube and Docker](exercises/ansible_minikube_docker.md)
-* [Cloud Slack bot](exercises/cloud_slack_bot.md)
-* [Jenkins: writing scripts](exercises/jenkins_scripts.md)
-* [Jenkins: writing pipelines](exercises/jenkins_pipelines.md)
-* [CI for open source project](exercises/ci_for_open_source_project.md)
-* [Flask, Containers and CI](exercises/flask_container_ci/README.md)
-* [Flask, Containers and CI 2](exercises/flask_container_ci2/README.md)
-
+- [Writing a Dockerfile and running a container](exercises/write_dockerfile_run_container.md)
+- [Elasticsearch & Kibana on AWS](exercises/elk_kibana_aws.md)
+- [ELK & Filebeat](exercises/eflk.md)
+- [Ansible, Minikube and Docker](exercises/ansible_minikube_docker.md)
+- [Cloud Slack bot](exercises/cloud_slack_bot.md)
+- [Jenkins: writing scripts](exercises/jenkins_scripts.md)
+- [Jenkins: writing pipelines](exercises/jenkins_pipelines.md)
+- [CI for open source project](exercises/ci_for_open_source_project.md)
+- [Flask, Containers and CI](exercises/flask_container_ci/README.md)
+- [Flask, Containers and CI 2](exercises/flask_container_ci2/README.md)
 
 ## Credits
 
