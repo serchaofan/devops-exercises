@@ -1,49 +1,49 @@
 # Databases
 
 <details>
-<summary>What is a connection pool?</summary><br><b>
+<summary>什么是连接池?</summary><br><b>
+连接池是数据库连接的缓存，用于设置建立查询连接的上限
 
-Connection Pool is a cache of database connections and the reason it's used is to avoid an overhead of establishing a connection for every query done to a database.
 </b></details>
 
 <details>
-<summary>What is a connection leak?</summary><br><b>
+<summary>什么是连接泄漏?</summary><br><b>
+连接泄漏是数据库连接在创建后没有被关闭且不再使用
 
-A connection leak is a situation where database connection isn't closed after being created and is no longer needed.
 </b></details>
 
 <details>
-<summary>What is Table Lock?</summary><br><b>
+<summary>什么是表锁?</summary><br><b>
+
 </b></details>
 
 <details>
-<summary>Your database performs slowly than usual. More specifically, your queries are taking a lot of time. What would you do?</summary><br><b>
+<summary>数据库比平时慢，请求花费大量时间，如何解决?</summary><br><b>
 
-- Query for running queries and cancel the irrelevant queries
-- Check for connection leaks (query for running connections and include their IP)
-- Check for table locks and kill irrelevant locking sessions
-  </b></details>
+- 查询正在运行的查询请求，取消无关的查询请求
+- 检查连接泄漏，查询正在运行的连接和他们的 IP
+- 检查表锁并杀死无关的锁会话
 
-<details>
-<summary>What is a connection leak?</summary><br><b>
 </b></details>
 
 <details>
-<summary>What is a Data Warehouse?</summary><br><b>
+<summary>什么是数据仓库?</summary><br><b>
+数据仓库是一种面向主题的、集成的、时变的、非易变的数据集合，用于支持组织的决策过程
 
-"A data warehouse is a subject-oriented, integrated, time-variant and non-volatile collection of data in support of organisation's decision-making process"
 </b></details>
 
 <details>
-<summary>What is a data lake?</summary><br><b>
+<summary>什么是数据湖（data lake）?</summary><br><b>
+以原始格式存储的单一数据源
 
-A single data source (at least usually) which is stored in a raw format.
 </b></details>
 
 <details>
 <summary>What is OLTP (Online transaction processing)?</summary><br><b>
+
 </b></details>
 
 <details>
 <summary>What is OLAP (Online Analytical Processing)?</summary><br><b>
+
 </b></details>

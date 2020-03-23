@@ -1,32 +1,26 @@
 # Monitoring
 
-<a name="monitoring-beginner"></a>
-
 <details>
-<summary>Explain monitoring. What is it? What its goal?</summary><br><b>
+<summary>什么是监控，监控的目的是什么？</summary><br><b>
 </b></details>
 
 <details>
-<summary>What is wrong with the old approach of watching for a specific value and trigger an email/phone alert while value is exceeded?</summary><br><b>
+<summary>以前旧的做法是去监控指定的值，当超过时就触发发送邮件或短信，这种做法有什么问题？</summary><br><b>
 
-This approach require from a human to always check why the value exceeded and how to handle it while today, it is more effective to notify people only when they need to take an actual action.
-If the issue doesn't require any human intervention, then the problem can be fixed by some processes running in the relevant environment.
+需要运维人员经常去检查为什么会超出范围，以及思考如何解决问题，这会耗费大量时间。
+最好是在需要人进行实际操作时再提醒，并且能实现一些相关进程自动修复，不需要人介入。
+
 </b></details>
 
 <details>
-<summary>What types of monitoring outputs are you familiar with and/or used in the past?</summary><br><b>
+<summary>你过去常用且熟悉的监控输出类型有哪些？</summary><br><b>
 
-Alerts
-Tickets
-Logging
+Alerts 告警
+Tickets 标签
+Logging 日志
 </b></details>
 
 <details>
-<summary>What is the different between infrastructure monitoring and application monitoring? (methods, tools, ...)</summary><br><b>
-</b></details>
+<summary>基础设施的监控和应用的监控的区别? （方法、工具等）</summary><br><b>
 
-##### Python Geeks :)
-
-<details>
-<summary>Tell me something about Python that you think most people don't know</summary><br><b>
 </b></details>

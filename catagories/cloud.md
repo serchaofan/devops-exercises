@@ -3,47 +3,48 @@
 <a name="cloud-beginner"></a>
 
 <details>
-<summary>What is Cloud Computing? What is a Cloud Provider?</summary><br><b>
+<summary>什么是云计算，什么是云提供商？</summary><br><b>
+
 </b></details>
 
 <details>
-<summary>What are the advantages of cloud computing? Mention at least 3 advantages</summary><br><b>
+<summary>云计算优点？</summary><br><b>
 
-- Pay as you go (or consumption-based payment) - you are paying only for what you are using. No upfront payments and payment stops when resources are no longer used.
-- Scalable - resources are scaled down or up based on demand
-  </b></details>
+- Pay as you go ：用多少付多少
+- Scalable：动态扩缩容
+
+</b></details>
 
 <details>
-<summary>What types of Cloud Computing are there?</summary><br><b>
+<summary>云计算种类？</summary><br><b>
 
 IAAS
 PAAS
 SAAS
+
 </b></details>
 
 <details>
-<summary>Explain each of the following Cloud Computing Deployments:
+<summary>解释以下云部署方式：</summary><br><b>
 
 - Public
 - Hybrid
-- Private</summary><br><b>
-  </b></details>
+- Private
 
-<details>
-<summary>What are the differences between Cloud Providers and On-Premise solution?</summary><br><b>
-
-In cloud providers, someone else owns and manages the hardware, hire the relevant infrastructure teams and pays for real-estate (for both hardware and people). You can focus on your business.
-
-In On-Premise solution, it's quite the opposite. You need to take care of hardware, infrastructure teams and pay for everything which can be quite expensive. On the other hand it's tailored to your needs.
 </b></details>
 
 <details>
-<summary>What is Serverless Computing?</summary><br><b>
+<summary>云提供商和预置（On-Promise）解决方案的区别?</summary><br><b>
 
-The main idea behind serverless computing is that you don't need to manage the creation and configuration of server. All you need to focus on is splitting your app into multiple functions which will be triggered by some actions.
+云提供商会为企业维护硬件和管理，企业无需操心服务器问题
 
-It's important to note that:
+On-promise 需要企业自己搭建机房，管理维护主机
 
-- Serverless Computing is still using servers. So saying there are no servers in serverless computing is completely wrong
-- Serverless Computing allows you to have different paying model. You basically pay only when your functions are running and not when the VM or containers are running as in other payment models
-  </b></details>
+</b></details>
+
+<details>
+<summary>Serverless是什么?</summary><br><b>
+
+Serverless（无服务器架构）指的是服务端逻辑由开发者实现，运行在无状态的计算容器中，由事件触发，完全被第三方管理，而业务层面的状态则记录在数据库或存储资源中。
+
+</b></details>

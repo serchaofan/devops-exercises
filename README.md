@@ -4,8 +4,11 @@ DevOps/SRE/云/网络/系统/数据库/大数据 常见面试题集合 个人汉
 
 fork 自[bregman-arie/devops-exercises](https://github.com/bregman-arie/devops-exercises)
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
 <center>
-<table>
+<table class="table">
+<tbody>
   <tr>
     <td align="center" style="width: 60px;height: 60px">
       <a href="./catagories/devops.md"><img src="images/devops.svg" height="60px" width="60px" /><br /><b>DevOps</b></a>
@@ -131,6 +134,7 @@ fork 自[bregman-arie/devops-exercises](https://github.com/bregman-arie/devops-e
       <a href="#exercises"><img src="images/exercises.png" height="60px" width="60px" /><br /><b>练习</b></a>
     </td>
   </tr>
+  </tbody>
 </table>
 </center>
 

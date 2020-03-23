@@ -4,7 +4,7 @@
 <summary>什么是DevOps?</summary><br><b>
 
 Amazon:
-"DevOps 是文化理念、实践和工具的组合，它提高了组织快速交付应用程序和服务的能力:与使用传统软件开发和基础设施管理过程的组织相比，它以更快的速度演进和改进产品。这种速度使组织能够更好地为客户服务，并在市场上更有效地竞争。"
+"DevOps 集文化理念、实践和工具于一身，可以提高组织高速交付应用程序和服务的能力，与使用传统软件开发和基础设施管理流程相比，能够帮助组织更快地发展和改进产品。这种速度使组织能够更好地服务其客户，并在市场上更高效地参与竞争。"
 
 Microsoft:
 "DevOps 是人员，流程和产品的结合，可为我们的最终用户持续交付价值。 “Dev”和“Ops”的收缩是指取代孤立的开发和运营来创建多学科的团队，这些团队现在可以与共享的高效实践和工具一起工作。 DevOps 的基本实践包括敏捷计划，持续集成，持续交付以及对应用程序的监视。"
@@ -63,6 +63,7 @@ Red Hat:
 
 <details>
 <summary>您熟悉哪些CI / CD最佳实践？ 或您认为什么是CI / CD最佳实践？</summary><br><b>
+
 </b></details>
 
 <details>
@@ -112,6 +113,7 @@ Red Hat:
 
 <details>
 <summary>什么是缓存? 缓存如何工作的? 为什么缓存这么重要?</summary><br><b>
+
 </b></details>
 
 <details>
@@ -124,14 +126,17 @@ Red Hat:
 
 <details>
 <summary>描述设置服务器的工作流(Apache, IIS, Tomcat等)</summary><br><b>
+
 </b></details>
 
 <details>
 <summary>解释”开源“</summary><br><b>
+
 </b></details>
 
 <details>
 <summary>描述一下你设计或实施的服务、应用、项目的架构</summary><br><b>
+
 </b></details>
 
 <details>
@@ -148,10 +153,9 @@ You should be able to explain those that you mention.
 It can be as simple as one Ansible (or other CM tool) task that runs periodically with Cron. In more advanced cases, perhaps a CI system.
 </b></details>
 
-##### SRE
-
 <details>
 <summary>SRE与DevOps的对比</summary><br><b>
+
 </b></details>
 
 <details>
@@ -168,64 +172,74 @@ One can argue whether it's per company definition or a global one but at least a
 
 <details>
 <summary>什么是错误预算?</summary><br><b>
+
 </b></details>
 
 <details>
 <summary>什么是MTTF（平均故障时间）和MTTR（平均维修时间）？这些指标可帮助我们评估什么?</summary><br><b>
+
 </b></details>
 
 <details>
 <summary>什么是尸检（post-mortem）会议？ 它为什么如此重要?</summary><br><b>
+
 </b></details>
 
 <details>
 <summary>什么是“架构即代码”？ 你熟悉IAC的什么实现？</summary><br><b>
+
 </b></details>
 
 <details>
 <summary>你如何管理构建工件？</summary><br><b>
+
 </b></details>
 
 <details>
 <summary>你正在使用/首选哪种持续集成解决方案，为什么？</summary><br><b>
+
 </b></details>
 
 <details>
 <summary>熟悉或使用了哪些部署策略？</summary><br><b>
+
 </b></details>
 
 <details>
 <summary>如何为CI/CD资源（如服务器，存储设备等）施行计划容量</summary><br><b>
+
 </b></details>
 
 <details>
 <summary>如何为依赖于其他应用的应用构建或实现CD？</summary><br><b>
+
 </b></details>
 
 <details>
 <summary>如何衡量CI/CD的质量？是否使用任何度量标准或KPI来衡量质量？</summary><br><b>
+
 </b></details>
 
 <details>
 <summary>什么是配置漂移？它会引起什么问题？</summary><br><b>
 
-Configuration drift happens when in an environment of servers with the exact same configuration and software, a certain server
-or servers are being applied with updates or configuration which other servers don't get and over time these servers become
-slightly different than all others.
+简单来说：就是配置不同步，多个服务器有着相似或相同的配置，但在配置更新时，只有部分服务器更新了配置，造成了各个服务器之间配置相对不同步。会造成很多问题，且不易排查。
 
-This situation might lead to bugs which hard to identify and reproduce.
 </b></details>
 
 <details>
 <summary>如何应对配置漂移？</summary><br><b>
+
 </b></details>
 
 <details>
 <summary>是否有测试跨项目变更（又称交叉依赖）的经验？</summary><br><b>
 
-Note: cross-dependency is when you have two or more changes to separate projects and you would like to test them in mutual build instead of testing each change separately.
+交叉依赖：当有多个独立项目，而你想相互构建而不是单独构建
+
 </b></details>
 
 <details>
 <summary>你是否为开源项目做出了贡献？</summary><br><b>
+
 </b></details>
