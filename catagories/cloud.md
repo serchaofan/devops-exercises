@@ -1,7 +1,5 @@
 # Cloud
 
-<a name="cloud-beginner"></a>
-
 <details>
 <summary>什么是云计算，什么是云提供商？</summary><br><b>
 

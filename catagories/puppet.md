@@ -1,7 +1,5 @@
 # Puppet
 
-<a name="puppet-beginner"></a>
-
 <details>
 <summary>What is Puppet? How it works?</summary><br><b>
 </b></details>

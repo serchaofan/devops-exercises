@@ -1,7 +1,5 @@
 # Python
 
-<a name="python-beginner"></a>
-
 <details>
 <summary>What are some characteristics of the Python programming language?</summary><br><b>
 

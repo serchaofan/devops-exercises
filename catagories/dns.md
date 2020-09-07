@@ -1,16 +1,14 @@
 # DNS
 
-<a name="dns-beginner"></a>
-
 <details>
-<summary>What is DNS? What is it used for?</summary><br><b>
+<summary>什么是DNS，用来作什么?</summary><br><b>
 
 DNS (Domain Name Systems) is a protocol used for converting domain names into IP addresses.<br>
 As you know computer networking is done with IP addresses (layer 3 of the OSI model) but for as humans it's hard to remember IP addresses, it's much easier to remember names. This why we need something such as DNS to convert any domain name we type into an IP address. You can think on DNS as a huge phonebook or database where each corresponding name has an IP.
 </b></details>
 
 <details>
-<summary>How DNS works?</summary><br><b>
+<summary>DNS如何工作?</summary><br><b>
 
 In general the process is as follows:
 
@@ -26,7 +24,7 @@ In general the process is as follows:
   </b></details>
 
 <details>
-<summary>What types of DNS records are there?</summary><br><b>
+<summary>DNS记录有哪些类型?</summary><br><b>
 
 - A
 - PTR
@@ -35,38 +33,40 @@ In general the process is as follows:
   </b></details>
 
 <details>
-<summary>What is a A record?</summary><br><b>
+<summary>A记录是什么?</summary><br><b>
 
 A (Address) Maps a host name to an IP address. When a computer has multiple adapter cards and IP addresses, it should have multiple address records.
 
 </b></details>
 
 <details>
-<summary>What is a AAAA record?</summary><br><b>
+<summary>AAAA记录是什么?</summary><br><b>
 </b></details>
 
 <details>
-<summary>What is a PTR record?</summary><br><b>
+<summary>PTR记录是什么?</summary><br><b>
 
 While an A record points a domain name to an IP address, a PTR record does the opposite and resolves the IP address to a domain name.
 </b></details>
 
 <details>
-<summary>What is a MX record?</summary><br><b>
+<summary>MX记录是什么?</summary><br><b>
 MX (Mail Exchange) Specifies a mail exchange server for the domain, which allows mail to be delivered to the correct mail servers in the domain.
 
 </b></details>
 
 <details>
-<summary>Is DNS using TCP or UDP?</summary><br><b>
+<summary>DNS用TCP还是UDP?</summary><br><b>
+
+DNS 使用的是 UDP，端口 53。但如果请求头大于 512 字节，则会使用 TCP 发送，因为 UDP 头最大就 512 字节。TCP 端口也是 53
 </b></details>
 
 <details>
-<summary>What is Round Robin DNS?</summary><br><b>
+<summary>什么是轮询DNS?</summary><br><b>
 </b></details>
 
 <details>
-<summary>What is DNS Record TTL? Why do we need it?</summary><br><b>
+<summary>什么是DNS记录的TTL，需要吗？</summary><br><b>
 </b></details>
 
 <details>

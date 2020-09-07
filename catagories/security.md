@@ -1,7 +1,5 @@
 # Security
 
-<a name="security-beginner"></a>
-
 <details>
 <summary>Can you describe the DevSecOps core principals?</summary><br><b>
 </b></details>

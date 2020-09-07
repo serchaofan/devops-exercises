@@ -1,7 +1,5 @@
 # Terraform
 
-<a name="terraform-beginner"></a>
-
 <details>
 <summary>Can you explain what is Terraform? How it works?</summary><br><b>
 

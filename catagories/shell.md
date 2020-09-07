@@ -1,7 +1,5 @@
 # Shell Scripting
 
-<a name="shell-scripting-beginner"></a>
-
 <details>
 <summary>Tell me about your experience with shell scripting</summary><br><b>
 

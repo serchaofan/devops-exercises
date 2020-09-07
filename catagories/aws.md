@@ -1,7 +1,5 @@
 # AWS
 
-<a name="aws-beginner"></a>
-
 #### Global Infrastructure
 
 <details>

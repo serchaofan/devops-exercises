@@ -1,7 +1,5 @@
 # Virtualization
 
-<a name="virtualization-beginner"></a>
-
 <details>
 <summary>Explain what is Virtualization</summary><br><b>
 </b></details>

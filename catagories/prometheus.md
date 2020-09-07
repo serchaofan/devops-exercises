@@ -1,7 +1,5 @@
 # Prometheus
 
-<a name="prometheus-beginner"></a>
-
 <details>
 <summary>What is Prometheus? What are some of Prometheus's main features?</summary><br><b>
 </b></details>

@@ -1,7 +1,5 @@
 # Elastic
 
-<a name="elastic-beginner"></a>
-
 <details>
 <summary>What is the Elastic Stack?</summary><br><b>
 
