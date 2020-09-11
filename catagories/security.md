@@ -1,26 +1,26 @@
 # Security
 
 <details>
-<summary>Can you describe the DevSecOps core principals?</summary><br><b>
+<summary>解释DevSecOps的核心原则?</summary><br><b>
 </b></details>
 
 <details>
-<summary>What DevOps security best practices are you familiar with?</summary><br><b>
+<summary>DevOps安全的最佳实践?</summary><br><b>
 </b></details>
 
 <details>
-<summary>What security techniques are you familiar with?</summary><br><b>
+<summary>熟悉的安全技术?</summary><br><b>
 </b></details>
 
 <details>
-<summary>Explain Authentication and Authorization</summary><br><b>
+<summary>解释验证Authentication和授权Authorization</summary><br><b>
 
 Authentication is the process of identifying whether a service or a person is who they claim to be.
 Authorization is the process of identifying what level of access the service or the person have (after authentication was done)
 </b></details>
 
 <details>
-<summary>How do you manage passwords in different tools and platforms?</summary><br><b>
+<summary>如何管理不同平台和工具的密码?</summary><br><b>
 </b></details>
 
 <details>
